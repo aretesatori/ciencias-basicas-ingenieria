@@ -4,7 +4,8 @@
 
 Asignaturas:
 
-1. [*BAIN065-24 | Álgebra para Ingeniería*](https://github.com/aretesatori/ciencias-basicas-ingenieria/1.-BAIN065-24_Algebra-para-Ingenieria.ipynb)
-2. [*BAIN067-24 | Geometría para Ingeniería*](https://github.com/aretesatori/ciencias-basicas-ingenieria/1.-BAIN067-24_Geometria-para-Ingenieria.ipynb)
+* [_BAIN065-24_ | _Álgebra para Ingeniería_](./BAIN065-24.ipynb)
+* [_BAIN067-24_ | _Geometría para Ingeniería_](./BAIN067-24.ipynb)
+* [_BAIN069-14_ | _Química para Ingeniería_](./BAIN069-14.ipynb)
 
 > Consultas y sugerencias a mi correo electrónico: [arete.poffart@alumnos.uach.cl](mailto:arete.poffart@alumnos.uach.cl) ∨ [aretesatori@gmail.com](mailto:aretesatori@gmail.com).
