@@ -38,5 +38,5 @@ Este es un repositorio con apuntes de contenidos de Ciencias Básicas, del plan 
 
 > $$\bigstar\quad\bigstar\quad\bigstar$$ 
 > $\quad$ - Un agradecimiento especial al profesor Pablo Huijse por desarrollar y disponibilizar la plantilla de construcción de libros interactivos en Jupyter Notebook.  
-> $\quad$ - Repositorio del proyecto: https://github.com/phuijse/JupyterBookUACh  
-> <span style="text-align: center;">$\bigstar\quad\bigstar\quad\bigstar$</span>
+> $\quad$ - Repositorio del proyecto: $\quad$ https://github.com/phuijse/JupyterBookUACh  
+> 

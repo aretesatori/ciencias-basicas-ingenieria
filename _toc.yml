@@ -1,10 +1,9 @@
 
 format: jb-book
-root: README
+root: books/README
 parts:
   - caption: Álgebra para Ingeniería
     numbered: true
-    start: 0
     chapters:
     - file: books/BAIN065-24/0_BAIN065-24
     - file: books/BAIN065-24/1_BAIN065-24

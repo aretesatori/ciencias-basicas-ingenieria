@@ -28,12 +28,15 @@ latex:
 
 html:
   favicon: "https://github.githubassets.com/favicons/favicon-dark.svg"
+  
 # Add a bibtex file so that we can create citations
 #bibtex_bibfiles:
 #  - references.bib
 theme:
   # Puedes cambiar "light" a "dark" si prefieres el tema oscuro
-  default: light
+  # default: light
+  name: null
+  
 
 sphinx:
   #extra_extensions: [bokeh.sphinxext.bokeh_plot]
