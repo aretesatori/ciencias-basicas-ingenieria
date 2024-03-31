@@ -1,0 +1,22 @@
+
+format: jb-book
+root: README
+parts:
+  - caption: Álgebra para Ingeniería
+    numbered: true
+    start: 0
+    chapters:
+    - file: books/BAIN065-24/0_BAIN065-24
+    - file: books/BAIN065-24/1_BAIN065-24
+    - file: books/BAIN065-24/2_BAIN065-24
+  #- caption: Geometría para Ingeniería
+  #  numbered: true
+  #  chapters:
+  #   - file: 
+  #  - file: subjects/BAIN067-24/0_BAIN067-24
+  #  - file: subjects/BAIN067-24/1_BAIN067-24
+  #  - file: subjects/BAIN067-24/2_BAIN067-24
+  #- caption: Química para Ingeniería
+  #  numbered: true
+  #  chapters:
+  #  - file: contenidos/unidad3/clase7

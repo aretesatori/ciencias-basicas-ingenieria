@@ -1,0 +1,42 @@
+# Book settings
+# Learn more at https://jupyterbook.org/customize/config.html
+
+title: Ciencias Básicas Ingeniería
+author: Areté Poffart
+copyright: "2024"
+logo: logo-uach.png
+
+# Force re-execution of notebooks on each build.
+# See https://jupyterbook.org/content/execute.html
+execute:
+  execute_notebooks: force
+  allow_errors: true
+  
+parse:
+  myst_enable_extensions: 
+    - colon_fence
+    - dollarmath
+  #  - html_image
+    - linkify
+    - substitution
+  myst_url_schemes: [mailto, http, https]
+
+# Define the name of the latex output file for PDF builds
+latex:
+  latex_documents:
+    targetname: book.tex
+
+html:
+  favicon: "https://github.githubassets.com/favicons/favicon-dark.svg"
+# Add a bibtex file so that we can create citations
+#bibtex_bibfiles:
+#  - references.bib
+theme:
+  # Puedes cambiar "light" a "dark" si prefieres el tema oscuro
+  default: light
+
+sphinx:
+  #extra_extensions: [bokeh.sphinxext.bokeh_plot]
+  config:
+    language: en
+    #bibtex_reference_style: author_year

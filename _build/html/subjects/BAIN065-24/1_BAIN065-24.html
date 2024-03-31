@@ -1,0 +1,777 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>1. Números Reales y Lenguaje Algebraico &#8212; Ciencias Básicas Ingeniería</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'subjects/BAIN065-24/1_BAIN065-24';</script>
+    <link rel="shortcut icon" href="https://github.githubassets.com/favicons/favicon-dark.svg"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="2. Ecuaciones Algebraicas" href="2_BAIN065-24.html" />
+    <link rel="prev" title="My Notebook" href="../../README.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../../README.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/logo-uach.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../../_static/logo-uach.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../README.html">
+                    My Notebook
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Álgebra para Ingeniería</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">1. Números Reales y Lenguaje Algebraico</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2_BAIN065-24.html">2. Ecuaciones Algebraicas</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/subjects/BAIN065-24/1_BAIN065-24.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Números Reales y Lenguaje Algebraico</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#axiomas-de-cuerpo">1.1. Axiomas de Cuerpo</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operatoria-con-numeros-enteros">1.2. Operatoria con Números Enteros</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#jerarquia-de-operaciones">1.2.1. Jerarquía de Operaciones</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#papomudas-span-style-background-color-rgb-150-236-255-span">1.2.1.1. PAPOMUDAS:<span style="background-color: rgb(150, 236, 255)"></span></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#division-de-numeros-enteros">1.2.2. División de Números Enteros</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#numeros-racionales">1.3. Números Racionales</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#propiedades">1.3.1. Propiedades</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#potencias">1.4. Potencias</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">1.4.1. Propiedades</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#notacion-cientifica">1.5. Notación Científica</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#numeros-irracionales">1.6. Números Irracionales</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#raiz-enesima">1.7. Raiz Enésima</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">1.7.1. Propiedades</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#racionalizacion">1.8. Racionalización</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#expresiones-algebraicas">1.9. Expresiones Algebraicas</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#termino-algebraico">1.9.1. Término Algebraico</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#expresion-algebraica">1.9.2. Expresión Algebraica</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#productos-notables">1.9.3. Productos Notables</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#suma-por-diferencia-y-diferencia-de-cuadrados">1.9.3.1. Suma por Diferencia y Diferencia de Cuadrados</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#cuadrado-de-binomio">1.9.3.2. Cuadrado de Binomio</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#producto-de-binomios-con-termino-comun">1.9.3.3. Producto de Binomios con Término Común</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#cubo-de-binomio">1.9.3.4. Cubo de Binomio</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="numeros-reales-y-lenguaje-algebraico">
+<h1><span class="section-number">1. </span>Números Reales y Lenguaje Algebraico<a class="headerlink" href="#numeros-reales-y-lenguaje-algebraico" title="Permalink to this heading">#</a></h1>
+<section id="axiomas-de-cuerpo">
+<h2><span class="section-number">1.1. </span>Axiomas de Cuerpo<a class="headerlink" href="#axiomas-de-cuerpo" title="Permalink to this heading">#</a></h2>
+<p>Sean <span class="math notranslate nohighlight">\(a\)</span> y <span class="math notranslate nohighlight">\(b\)</span> Números Reales (<span class="math notranslate nohighlight">\(a, b\in\mathbb{R}\)</span>), se cumplen las siguientes propiedades:</p>
+<ul class="simple">
+<li><p><strong>Conmutatividad</strong></p></li>
+</ul>
+<blockquote>
+<div><p><span class="math notranslate nohighlight">\(a + b = b + a\)</span></p>
+<p><span class="math notranslate nohighlight">\(a \cdot b = b \cdot a\)</span></p>
+</div></blockquote>
+<ul class="simple">
+<li><p><strong>Asociatividad</strong></p></li>
+</ul>
+<blockquote>
+<div><p><span class="math notranslate nohighlight">\(a + (b + c) = (a + b) + c\)</span></p>
+<p><span class="math notranslate nohighlight">\(a \cdot (b \cdot c) = (a \cdot b) \cdot c\)</span></p>
+</div></blockquote>
+<ul class="simple">
+<li><p><strong>Distributividad</strong></p></li>
+</ul>
+<blockquote>
+<div><p><span class="math notranslate nohighlight">\(a \cdot (b + c) = a\cdot b + a\cdot c\)</span></p>
+</div></blockquote>
+<ul class="simple">
+<li><p><strong>Neutro</strong></p></li>
+</ul>
+<blockquote>
+<div><p><span class="math notranslate nohighlight">\(a + 0 = a\)</span></p>
+<p><span class="math notranslate nohighlight">\(a \cdot 1 = a\)</span></p>
+</div></blockquote>
+<ul class="simple">
+<li><p><strong>Inverso</strong></p></li>
+</ul>
+<blockquote>
+<div><p><span class="math notranslate nohighlight">\(a + (-a) = 0\)</span></p>
+<p><span class="math notranslate nohighlight">\(a \cdot a^{-1} = 1 \quad;\quad a \neq 0\)</span></p>
+</div></blockquote>
+<ul class="simple">
+<li><p><strong>Clausura</strong></p></li>
+</ul>
+<blockquote>
+<div><p><span class="math notranslate nohighlight">\(a + b\in\mathbb{R}\)</span></p>
+<p><span class="math notranslate nohighlight">\(a \cdot b\in\mathbb{R}\)</span></p>
+</div></blockquote>
+</section>
+<section id="operatoria-con-numeros-enteros">
+<h2><span class="section-number">1.2. </span>Operatoria con Números Enteros<a class="headerlink" href="#operatoria-con-numeros-enteros" title="Permalink to this heading">#</a></h2>
+<p>En <span class="math notranslate nohighlight">\(\mathbb{Z}\)</span> (Números Enteros) podemos realizar:</p>
+<ul class="simple">
+<li><p>Sumas</p></li>
+<li><p>Restas</p></li>
+<li><p>Multiplicaciones</p></li>
+<li><p>Potencias (con exponente no negativo)</p></li>
+</ul>
+<section id="jerarquia-de-operaciones">
+<h3><span class="section-number">1.2.1. </span>Jerarquía de Operaciones<a class="headerlink" href="#jerarquia-de-operaciones" title="Permalink to this heading">#</a></h3>
+<section id="papomudas-span-style-background-color-rgb-150-236-255-span">
+<h4><span class="section-number">1.2.1.1. </span>PAPOMUDAS:<span style="background-color: rgb(150, 236, 255)"></span><a class="headerlink" href="#papomudas-span-style-background-color-rgb-150-236-255-span" title="Permalink to this heading">#</a></h4>
+<p><strong>1º</strong> Paréntesis;</p>
+<p><strong>2º</strong> Potencias;</p>
+<p><strong>3º</strong> Multiplicaciones;</p>
+<p><strong>4º</strong> Divisiones;</p>
+<p><strong>5º</strong> Adición y Sustracción.</p>
+</section>
+<p><strong>Ejemplos:</strong></p>
+<blockquote>
+<div><p><span style="background-color: rgb(150, 236, 255)"></span>
+a) <span class="math notranslate nohighlight">\(\quad\begin{equation}4 + 3 [2 - (4 - 5 (3 - 2))] + 7\end{equation}\)</span></p>
+<p><span class="math notranslate nohighlight">\(\quad\begin{equation}= 4 + 3 [2 - (4 - 5 \cdot (1))] + 7\end{equation}\)</span></p>
+<p><span class="math notranslate nohighlight">\(\quad\begin{equation}= 4 + 3 [2 - (4 - 5)] + 7\end{equation}\)</span></p>
+<p><span class="math notranslate nohighlight">\(\quad\begin{equation}= 4 + 3 [2 - (-1)] + 7\end{equation}\)</span></p>
+<p><span class="math notranslate nohighlight">\(\quad\begin{equation}= 4 + 3 [2 + 1] + 7\end{equation}\)</span></p>
+<p><span class="math notranslate nohighlight">\(\quad\begin{equation}= 4 + 3 \cdot [3] + 7\end{equation}\)</span></p>
+<p><span class="math notranslate nohighlight">\(\quad\begin{equation}= 4 + 9 + 7\end{equation}\)</span></p>
+<p><span class="math notranslate nohighlight">\(\quad\begin{equation}= 4 + 9 + 7\end{equation}\)</span></p>
+<p><span class="math notranslate nohighlight">\(\quad\begin{equation}= 20\end{equation}\)</span></p>
+</div></blockquote>
+</section>
+<section id="division-de-numeros-enteros">
+<h3><span class="section-number">1.2.2. </span>División de Números Enteros<a class="headerlink" href="#division-de-numeros-enteros" title="Permalink to this heading">#</a></h3>
+<p>Sean <span class="math notranslate nohighlight">\(a\)</span>, <span class="math notranslate nohighlight">\(b\)</span> Números Enteros, entonces existen <span class="math notranslate nohighlight">\(c\)</span> y <span class="math notranslate nohighlight">\(r\)</span> Números Enteros tales que:</p>
+<blockquote>
+<div><p><span class="math notranslate nohighlight">\(a = b \cdot c + r\)</span></p>
+</div></blockquote>
+<p>Donde <span class="math notranslate nohighlight">\(\quad r = 0\quad\)</span> <span class="math notranslate nohighlight">\(\vee\quad r &lt; b\)</span></p>
+<blockquote>
+<div><p><span class="math notranslate nohighlight">\(a\)</span>: <span class="math notranslate nohighlight">\(\quad\)</span>Dividendo<br />
+<span class="math notranslate nohighlight">\(b\)</span>: <span class="math notranslate nohighlight">\(\quad\)</span>Divisor<br />
+<span class="math notranslate nohighlight">\(c\)</span>: <span class="math notranslate nohighlight">\(\quad\)</span>Cociente<br />
+<span class="math notranslate nohighlight">\(r\)</span>: <span class="math notranslate nohighlight">\(\quad\)</span>Resto/Residuo</p>
+</div></blockquote>
+<p><br></br></p>
+</section>
+</section>
+<section id="numeros-racionales">
+<h2><span class="section-number">1.3. </span>Números Racionales<a class="headerlink" href="#numeros-racionales" title="Permalink to this heading">#</a></h2>
+<p>El Conjunto de los Números Racionales (<span class="math notranslate nohighlight">\(\mathbb{Q}\)</span>) está definida de la siguiente manera:</p>
+<blockquote>
+<div><p><span style="font-size: 12pt"><span class="math notranslate nohighlight">\(\mathbb{Q} = \{\frac{n}{m} : n, m \in\mathbb{Z}\quad ; \quad m \neq 0 \}\)</span></span></p>
+<p><span class="math notranslate nohighlight">\(n\)</span>: <span class="math notranslate nohighlight">\(\quad\)</span> Numerador<br />
+<span class="math notranslate nohighlight">\(m\)</span>: <span class="math notranslate nohighlight">\(\quad\)</span>Denominador</p>
+</div></blockquote>
+<section id="propiedades">
+<h3><span class="section-number">1.3.1. </span>Propiedades<a class="headerlink" href="#propiedades" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p><span style="font-size: 13pt"><span class="math notranslate nohighlight">\(\quad\frac{a}{b}\cdot\frac{c}{d} = \frac{a \cdot c}{b \cdot d}\)</span></span></p></li>
+<li><p><span style="font-size: 13pt"><span class="math notranslate nohighlight">\(\quad\frac{a}{b}\div\frac{c}{d} = \frac{a}{b}\cdot\frac{d}{c} = \frac{a \cdot d}{b \cdot c}\)</span></span></p></li>
+</ul>
+<p><strong>Ejemplos:</strong></p>
+<p><br></br></p>
+</section>
+</section>
+<section id="potencias">
+<h2><span class="section-number">1.4. </span>Potencias<a class="headerlink" href="#potencias" title="Permalink to this heading">#</a></h2>
+<blockquote>
+<div><p><span class="math notranslate nohighlight">\(a^{n} = a \cdot a \cdot a \cdot (...) \cdot a \quad;\quad\text{con }n \in\mathbb{Z}\)</span></p>
+<p><span class="math notranslate nohighlight">\(a\)</span>: <span class="math notranslate nohighlight">\(\quad\)</span>Base<br />
+<span class="math notranslate nohighlight">\(n\)</span>: <span class="math notranslate nohighlight">\(\quad\)</span>Exponente</p>
+</div></blockquote>
+<section id="id1">
+<h3><span class="section-number">1.4.1. </span>Propiedades<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\quad a^{0} = 1 \quad;\quad a \neq 0\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\quad a^{-1} = \frac{1}{a} \quad;\quad a \neq 0\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\quad a^{-n} = \frac{1}{a} \quad;\quad a \neq 0\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\quad a^{n}\cdot a^{m} = a^{n+m}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\quad \frac{a^{n}}{a^{m}} = a^{n-m} \quad;\quad a \neq 0\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\quad (\frac{a}{b})^{n} = \frac{a^{n}}{b^{n}} \quad;\quad b \neq 0\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\quad (a \cdot b)^{n} = a^{n} \cdot b^{n}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\quad (a^{n})^{m} = {n \cdot m}\)</span></p></li>
+</ul>
+</div></blockquote>
+<p><strong>Ejemplos:</strong></p>
+<p><br></br></p>
+</section>
+</section>
+<section id="notacion-cientifica">
+<h2><span class="section-number">1.5. </span>Notación Científica<a class="headerlink" href="#notacion-cientifica" title="Permalink to this heading">#</a></h2>
+<p>Un Número Real está escrito en Notación Científica si tiene la siguiente forma:</p>
+<blockquote>
+<div><p><span class="math notranslate nohighlight">\(a \times 10^{n} \quad,\quad 1 \leq a &lt; 10 \quad\wedge\quad n \in\mathbb{Z}\)</span></p>
+</div></blockquote>
+<p><strong>Ejemplos:</strong></p>
+<blockquote>
+<div><ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\quad 435792 = 4.35792 \times 10^{5}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\quad 0.000000322 = 3.22 \times 10{-7}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\quad 53.7392 = 5.37392 \times 10^{1}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\quad 0.000000000012 = 1.2 \times 10^{-11}\)</span></p></li>
+</ul>
+</div></blockquote>
+<p><br></br></p>
+</section>
+<section id="numeros-irracionales">
+<h2><span class="section-number">1.6. </span>Números Irracionales<a class="headerlink" href="#numeros-irracionales" title="Permalink to this heading">#</a></h2>
+<p>Los Números Irracionales (<span class="math notranslate nohighlight">\(\mathbb{I}\)</span>) son todos los números decimales infinitos no periodicos.</p>
+<p><strong>Ejemplos:</strong></p>
+<blockquote>
+<div><p><span class="math notranslate nohighlight">\(\pi\quad\approx\quad 3.14159265...\)</span></p>
+<p><span class="math notranslate nohighlight">\(e\quad\approx\quad 2.71818282...\)</span></p>
+<p><span class="math notranslate nohighlight">\(\sqrt{2}\quad\approx\quad 1.41421356\)</span></p>
+<p><span class="math notranslate nohighlight">\((...)\)</span></p>
+</div></blockquote>
+<p><br></br></p>
+</section>
+<section id="raiz-enesima">
+<h2><span class="section-number">1.7. </span>Raiz Enésima<a class="headerlink" href="#raiz-enesima" title="Permalink to this heading">#</a></h2>
+<p>La Raiz Enésima de un Número Real se define como:</p>
+<blockquote>
+<div><p><span class="math notranslate nohighlight">\(\sqrt[n]{a}\)</span></p>
+<p><span class="math notranslate nohighlight">\(n\)</span> es un Número Natural mayor que 1<br />
+<span class="math notranslate nohighlight">\(a\)</span> es un Número Real</p>
+</div></blockquote>
+<p><em>Obs.:<span style="background-color: yellow"></span></em></p>
+<ul class="simple">
+<li><p>Si <span class="math notranslate nohighlight">\(n\)</span> es par, entonces <span class="math notranslate nohighlight">\(a \geq 0\)</span></p></li>
+<li><p>Si <span class="math notranslate nohighlight">\(n\)</span> es impar, entonces <span class="math notranslate nohighlight">\(a \in\mathbb{R}\)</span></p></li>
+</ul>
+<section id="id2">
+<h3><span class="section-number">1.7.1. </span>Propiedades<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\quad\sqrt[n]{a^m} = a^{\frac{m}{n}}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\quad\sqrt[n]{a^n} = a^{\frac{n}{n}} = a \quad;\quad a &gt; 0\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\quad\sqrt[n]{a}\cdot\sqrt[n]{b} = \sqrt[n]{a \cdot b} \quad;\quad a, b &gt; 0\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\quad\frac{\sqrt[n]{a}}{\sqrt[n]{b}} = \sqrt[n]{\frac{a}{b}} \quad;\quad a, b &gt; 0\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\quad(\sqrt[n]{a})^{m} = \sqrt[n]{a^m}\)</span></p></li>
+</ul>
+</div></blockquote>
+<p><strong>Ejemplos:</strong></p>
+<p><br></br></p>
+</section>
+</section>
+<section id="racionalizacion">
+<h2><span class="section-number">1.8. </span>Racionalización<a class="headerlink" href="#racionalizacion" title="Permalink to this heading">#</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\quad\frac{A}{\sqrt{B}}\quad \quad\Leftrightarrow\quad \quad\frac{A}{\sqrt{B}}\cdot\frac{\sqrt{B}}{\sqrt{B}} \quad=\quad \frac{A\cdot\sqrt{B}}{(\sqrt{B})^{2}} \quad=\quad \frac{A\cdot\sqrt{B}}{B} \quad;\quad B &gt; 0\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\quad\frac{A}{\sqrt[n]{B^m}}\quad \quad\Leftrightarrow\quad \quad\frac{A}{\sqrt[n]{B^m}}\cdot\frac{\sqrt[n]{B^n-m}}{\sqrt[n]{B^n-m}}\)</span></p></li>
+</ul>
+</div></blockquote>
+</section>
+<section id="expresiones-algebraicas">
+<h2><span class="section-number">1.9. </span>Expresiones Algebraicas<a class="headerlink" href="#expresiones-algebraicas" title="Permalink to this heading">#</a></h2>
+<section id="termino-algebraico">
+<h3><span class="section-number">1.9.1. </span>Término Algebraico<a class="headerlink" href="#termino-algebraico" title="Permalink to this heading">#</a></h3>
+</section>
+<section id="expresion-algebraica">
+<h3><span class="section-number">1.9.2. </span>Expresión Algebraica<a class="headerlink" href="#expresion-algebraica" title="Permalink to this heading">#</a></h3>
+</section>
+<section id="productos-notables">
+<h3><span class="section-number">1.9.3. </span>Productos Notables<a class="headerlink" href="#productos-notables" title="Permalink to this heading">#</a></h3>
+<section id="suma-por-diferencia-y-diferencia-de-cuadrados">
+<h4><span class="section-number">1.9.3.1. </span>Suma por Diferencia y Diferencia de Cuadrados<a class="headerlink" href="#suma-por-diferencia-y-diferencia-de-cuadrados" title="Permalink to this heading">#</a></h4>
+<blockquote>
+<div><p><span class="math notranslate nohighlight">\(\quad\begin{equation}(a + b)\cdot(a - b) 
+ \quad=\quad a^{2} - a\cdot b + b\cdot a - b^{2} 
+ \quad=\quad a^{2} - b^{2}\nonumber\end{equation}\)</span></p>
+</div></blockquote>
+<blockquote>
+<div><p><span class="math notranslate nohighlight">\(\quad\begin{equation}a^{2} - b^{2} 
+ \quad=\quad (a + b)\cdot(a - b)\nonumber\end{equation}\)</span></p>
+</div></blockquote>
+</section>
+<section id="cuadrado-de-binomio">
+<h4><span class="section-number">1.9.3.2. </span>Cuadrado de Binomio<a class="headerlink" href="#cuadrado-de-binomio" title="Permalink to this heading">#</a></h4>
+<blockquote>
+<div><p><span class="math notranslate nohighlight">\(\quad\begin{equation}(a + b)^{2} 
+ \quad=\quad (a + b)\cdot(a + b) 
+ \quad\Leftrightarrow\quad a^{2} + 2 a b + b^{2}\nonumber\end{equation}\)</span></p>
+</div></blockquote>
+<blockquote>
+<div><p><span class="math notranslate nohighlight">\(\quad\begin{equation}(a - b)^{2} 
+ \quad=\quad (a - b)\cdot(a - b)
+ \quad\Leftrightarrow\quad a^{2} - 2 a b + b^{2}\nonumber\end{equation}\)</span></p>
+</div></blockquote>
+</section>
+<section id="producto-de-binomios-con-termino-comun">
+<h4><span class="section-number">1.9.3.3. </span>Producto de Binomios con Término Común<a class="headerlink" href="#producto-de-binomios-con-termino-comun" title="Permalink to this heading">#</a></h4>
+<blockquote>
+<div><p><span class="math notranslate nohighlight">\(\quad\begin{equation}(a + b) \cdot (a + c) 
+ \quad=\quad a^{2} + (b + c)\cdot a + b \cdot c\nonumber\end{equation}\)</span></p>
+</div></blockquote>
+</section>
+<section id="cubo-de-binomio">
+<h4><span class="section-number">1.9.3.4. </span>Cubo de Binomio<a class="headerlink" href="#cubo-de-binomio" title="Permalink to this heading">#</a></h4>
+<blockquote>
+<div><p><span class="math notranslate nohighlight">\(\quad\begin{equation}(a + b)^{3} \quad=\quad (a + b)\cdot(a + b)\cdot(a + b)\nonumber\end{equation}\)</span></p>
+<p><span class="math notranslate nohighlight">\(\quad\begin{equation}\Leftrightarrow\quad (a + b)\cdot(a^{2} + 2ab + b^{2})\quad\Leftrightarrow\quad a^{3} + 3 a^{2} b + 3 a b^{2} + b^{3}\nonumber\end{equation}\)</span></p>
+</div></blockquote>
+<blockquote>
+<div><p><span class="math notranslate nohighlight">\(\quad\begin{equation}(a - b)^3 \quad=\quad (a - b)\cdot(a - b)\cdot(a - b)\nonumber\end{equation}\)</span></p>
+<p><span class="math notranslate nohighlight">\(\quad\begin{equation}\Leftrightarrow\quad (a - b)\cdot(a^{2} - 2ab + b^{2})\quad\Leftrightarrow\quad a^{3} - 3a^{2} b + 3ab^{2} - b^{3}\nonumber\end{equation}\)</span></p>
+</div></blockquote>
+</section>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./subjects/BAIN065-24"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../../README.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">My Notebook</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="2_BAIN065-24.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">2. </span>Ecuaciones Algebraicas</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#axiomas-de-cuerpo">1.1. Axiomas de Cuerpo</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operatoria-con-numeros-enteros">1.2. Operatoria con Números Enteros</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#jerarquia-de-operaciones">1.2.1. Jerarquía de Operaciones</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#papomudas-span-style-background-color-rgb-150-236-255-span">1.2.1.1. PAPOMUDAS:<span style="background-color: rgb(150, 236, 255)"></span></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#division-de-numeros-enteros">1.2.2. División de Números Enteros</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#numeros-racionales">1.3. Números Racionales</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#propiedades">1.3.1. Propiedades</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#potencias">1.4. Potencias</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">1.4.1. Propiedades</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#notacion-cientifica">1.5. Notación Científica</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#numeros-irracionales">1.6. Números Irracionales</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#raiz-enesima">1.7. Raiz Enésima</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">1.7.1. Propiedades</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#racionalizacion">1.8. Racionalización</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#expresiones-algebraicas">1.9. Expresiones Algebraicas</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#termino-algebraico">1.9.1. Término Algebraico</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#expresion-algebraica">1.9.2. Expresión Algebraica</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#productos-notables">1.9.3. Productos Notables</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#suma-por-diferencia-y-diferencia-de-cuadrados">1.9.3.1. Suma por Diferencia y Diferencia de Cuadrados</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#cuadrado-de-binomio">1.9.3.2. Cuadrado de Binomio</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#producto-de-binomios-con-termino-comun">1.9.3.3. Producto de Binomios con Término Común</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#cubo-de-binomio">1.9.3.4. Cubo de Binomio</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Areté Poffart
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
