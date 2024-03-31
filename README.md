@@ -9,8 +9,8 @@ Este es un repositorio con apuntes de contenidos de Ciencias Básicas, del plan 
 
 > ### Unidades
 
-> 1. [Números Reales y Lenguaje Algebraico](#)
-> 2. [Ecuaciones Algebraicas](#)
+> 1. [Números Reales y Lenguaje Algebraico](https://aretesatori.github.io/ciencias-basicas-ingenieria/books/BAIN065-24/1_BAIN065-24.html)
+> 2. [Ecuaciones Algebraicas](https://aretesatori.github.io/ciencias-basicas-ingenieria/books/BAIN065-24/2_BAIN065-24.html)
 > 3. Polinomios con Coeficientes Reales
 > 4. Lógica y Conjuntos
 > 5. Orden en los Números Reales
