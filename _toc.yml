@@ -1,6 +1,6 @@
 
 format: jb-book
-root: books/README
+root: books/index
 parts:
   - caption: Álgebra para Ingeniería
     numbered: true

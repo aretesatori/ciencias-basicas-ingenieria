@@ -35,8 +35,6 @@ Este es un repositorio con apuntes de contenidos de Ciencias Básicas, del plan 
 \~~
 > * Consultas y sugerencias a mi correo electrónico:  
 > [arete.poffart@alumnos.uach.cl](mailto:arete.poffart@alumnos.uach.cl) $\vee$ [aretesatori@gmail.com](mailto:aretesatori@gmail.com)
-
-> $$\bigstar\quad\bigstar\quad\bigstar$$ 
-> $\quad$ - Un agradecimiento especial al profesor Pablo Huijse por desarrollar y disponibilizar la plantilla de construcción de libros interactivos en Jupyter Notebook.  
-> $\quad$ - Repositorio del proyecto: $\quad$ https://github.com/phuijse/JupyterBookUACh  
-> 
+ 
+> $\bigstar$ Un agradecimiento especial al profesor Pablo Huijse por desarrollar y disponibilizar la plantilla de construcción de libros interactivos en Jupyter Notebook.  
+> $\bigstar$ Repositorio del proyecto: https://github.com/phuijse/JupyterBookUACh  
