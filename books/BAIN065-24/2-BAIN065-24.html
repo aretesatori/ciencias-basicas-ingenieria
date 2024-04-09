@@ -35,6 +35,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -63,11 +64,12 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'books/BAIN065-24/2_BAIN065-24';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'books/BAIN065-24/2-BAIN065-24';</script>
     <link rel="shortcut icon" href="https://github.githubassets.com/favicons/favicon-dark.svg"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="prev" title="1. Números Reales y Lenguaje Algebraico" href="1_BAIN065-24.html" />
+    <link rel="next" title="3. Polinomios con Coeficientes Reales" href="3-BAIN065-24.html" />
+    <link rel="prev" title="1. Números Reales y Lenguaje Algebraico" href="1-BAIN065-24.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -154,14 +156,15 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="../index.html">
-                    My Notebook
+                    Inicio
                 </a>
             </li>
         </ul>
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Álgebra para Ingeniería</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="1_BAIN065-24.html">1. Números Reales y Lenguaje Algebraico</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1-BAIN065-24.html">1. Números Reales y Lenguaje Algebraico</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">2. Ecuaciones Algebraicas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3-BAIN065-24.html">3. Polinomios con Coeficientes Reales</a></li>
 </ul>
 
     </div>
@@ -216,7 +219,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../../_sources/books/BAIN065-24/2_BAIN065-24.ipynb" target="_blank"
+      <li><a href="../../_sources/books/BAIN065-24/2-BAIN065-24.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -321,6 +324,11 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#metodo-de-gauss">2.3.5. Método de Gauss</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ecuacion-cuadratica">2.4. Ecuación Cuadrática</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#naturaleza-de-las-soluciones">2.4.1. Naturaleza de las Soluciones</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#valor-absoluto-de-un-numero">2.5. Valor Absoluto de un Número</a></li>
 </ul>
             </nav>
         </div>
@@ -456,7 +464,8 @@ b) Dado el sistema <span class="math notranslate nohighlight">\(\quad\left\{\beg
 <blockquote>
 <div><ol class="arabic simple" start="5">
 <li><p><span class="math notranslate nohighlight">\(\quad 3x - 2y = 4 \quad\Leftrightarrow\quad 3\cdot(2) - 2y = 4 \quad\Leftrightarrow\quad 6 - 2y = 4\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\(\quad - (6) + 6 - 2y = - (6) + 4  \quad\Leftrightarrow\quad - 2y = - 2 \quad\Leftrightarrow\quad \cdot(\frac{1}{2}) - 2y = \cdot(\frac{1}{2}) - 2  \quad\Leftrightarrow\quad - y = - 1 \quad\Leftrightarrow\quad \cdot(- 1) - y = \cdot(- 1) - 1\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\quad\Leftrightarrow\quad - (6) + 6 - 2y = - (6) + 4  \quad\Leftrightarrow\quad - 2y = - 2 \quad\Leftrightarrow\quad \cdot(\frac{1}{2}) - 2y = \cdot(\frac{1}{2}) - 2\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\quad\Leftrightarrow\quad - y = - 1 \quad\Leftrightarrow\quad \cdot(- 1) - y = \cdot(- 1) - 1\)</span></p></li>
 <li><p><span class="math notranslate nohighlight">\(\quad\Leftrightarrow\quad y = 1\)</span></p></li>
 </ol>
 </div></blockquote>
@@ -476,6 +485,79 @@ b) Dado el sistema <span class="math notranslate nohighlight">\(\quad\left\{\beg
 <section id="metodo-de-gauss">
 <h3><span class="section-number">2.3.5. </span>Método de Gauss<a class="headerlink" href="#metodo-de-gauss" title="Permalink to this heading">#</a></h3>
 </section>
+</section>
+<section id="ecuacion-cuadratica">
+<h2><span class="section-number">2.4. </span>Ecuación Cuadrática<a class="headerlink" href="#ecuacion-cuadratica" title="Permalink to this heading">#</a></h2>
+<p>Una Ecuación Cuadrática o Ecuación de Segundo Grado es una expresión del tipo:</p>
+<blockquote>
+<div><p><span class="math notranslate nohighlight">\(\begin{equation}ax^{2} + bx + c = 0\nonumber\end{equation}\)</span></p>
+</div></blockquote>
+<blockquote>
+<div><p>con <span class="math notranslate nohighlight">\(\quad a\)</span>, <span class="math notranslate nohighlight">\(b\)</span>, <span class="math notranslate nohighlight">\(c \in\mathbb{R}\quad\)</span> y <span class="math notranslate nohighlight">\(\quad x\)</span> la incógnita.</p>
+</div></blockquote>
+<p>Si <span class="math notranslate nohighlight">\(\quad a \neq 0\quad\)</span> la solución de esta ecuación está dada por la fórmula:</p>
+<blockquote>
+<div><p><span style="font-size: 14pt"><span class="math notranslate nohighlight">\(\begin{equation} x = \frac{- b \pm \sqrt{b^{2} - 4 \cdot a \cdot c}}{2 \cdot a} \nonumber\end{equation}\)</span></span></p>
+</div></blockquote>
+<section id="naturaleza-de-las-soluciones">
+<h3><span class="section-number">2.4.1. </span>Naturaleza de las Soluciones<a class="headerlink" href="#naturaleza-de-las-soluciones" title="Permalink to this heading">#</a></h3>
+<p>Se define el discriminante como: <span class="math notranslate nohighlight">\(\quad\Delta = b^2 - 4 \cdot a \cdot c\)</span></p>
+<blockquote>
+<div><p>Si <span class="math notranslate nohighlight">\(\Delta &gt; 0\)</span>, hay <strong>dos Soluciones Reales distintas</strong>.</p>
+<p>Si <span class="math notranslate nohighlight">\(\Delta = 0\)</span>, hay <strong>dos Soluciones Reales e iguales</strong>.</p>
+<p>Si <span class="math notranslate nohighlight">\(\Delta &lt; 0\)</span>, la ecuación <strong>no tiene Soluciones Reales</strong>.</p>
+</div></blockquote>
+<ul class="simple">
+<li><p>Si <span class="math notranslate nohighlight">\(\Delta\geq 0\)</span>, el Conjunto Solución será:</p></li>
+</ul>
+<blockquote>
+<div><p><span class="math notranslate nohighlight">\(\quad\begin{equation}S = \{ \} \end{equation}\)</span></p>
+</div></blockquote>
+<ul class="simple">
+<li><p>Si <span class="math notranslate nohighlight">\(\Delta &lt; 0\)</span>, el Conjunto Solución será vacío:</p></li>
+</ul>
+<blockquote>
+<div><p><span class="math notranslate nohighlight">\(\quad\begin{equation}S = \varnothing\end{equation}\)</span></p>
+</div></blockquote>
+<p><strong>Ejemplos:</strong></p>
+<p>Determine el Conjunto Solución.</p>
+<blockquote>
+<div><p>a) <span class="math notranslate nohighlight">\(\quad x^{2} - 5x - 24 = 0\)</span></p>
+<p><span class="math notranslate nohighlight">\(a = 1\)</span><br />
+<span class="math notranslate nohighlight">\(b = -5\)</span><br />
+<span class="math notranslate nohighlight">\(c = -24\)</span></p>
+<ol class="arabic simple">
+<li><p><span class="math notranslate nohighlight">\(\quad x = \frac{-(-5)\pm\sqrt{(-5)^{2} - 4 \cdot 1 \cdot (-24)}}{2 \cdot 1}\)</span>
+<span class="math notranslate nohighlight">\(\quad\Leftrightarrow\quad x = \frac{5\pm\sqrt{25 + 96}}{2}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\quad x = \frac{5\pm\sqrt{121}}{2}\)</span>
+<span class="math notranslate nohighlight">\(\quad\Leftrightarrow\quad x = \frac{5\pm 11}{2}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\quad x_1 = \frac{5 + 11}{2} \quad\Leftrightarrow\quad x_1 = \frac{16}{2} = 8\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\quad x_2 = \frac{5 - 11}{2} \quad\Leftrightarrow\quad x_2 = \frac{-6}{2} = -3\)</span></p></li>
+</ol>
+<p>El Conjunto Solución es: <span style="font-size: 12pt"><span class="math notranslate nohighlight">\(\quad S = \{8, -3\}\)</span></span></p>
+</div></blockquote>
+</section>
+</section>
+<section id="valor-absoluto-de-un-numero">
+<h2><span class="section-number">2.5. </span>Valor Absoluto de un Número<a class="headerlink" href="#valor-absoluto-de-un-numero" title="Permalink to this heading">#</a></h2>
+<p>Definición matemática del Valor Absoluto:</p>
+<blockquote>
+<div><p><span class="math notranslate nohighlight">\(\quad |x| =
+\left\{
+	\begin{array}{ll}
+		 x  &amp; \mbox{; si } x \geq 0 \\
+		-x &amp; \mbox{; si } x &lt; 0
+	\end{array}
+\right.\)</span></p>
+</div></blockquote>
+<p><strong>Propiedad:</strong></p>
+<blockquote>
+<div><ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\quad |a| = b \quad\Leftrightarrow\quad a = b \quad\vee\quad a = -b\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\quad \sqrt{x^2} \quad=\quad |x| \quad=\quad \left\{\begin{array}{ll}x &amp; \mbox{; si } x \geq 0 \\ -x &amp; \mbox{; si } x &lt; 0\end{array}\right.\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\quad |ax + b| \quad=\quad \left\{\begin{array}{ll}(ax + b) &amp; \mbox{; si } (ax + b) \geq 0 \\ -(ax + b) &amp; \mbox{; si } (ax + b) &lt; 0\end{array}\right.\)</span></p></li>
+</ul>
+</div></blockquote>
 </section>
 </section>
 
@@ -511,13 +593,22 @@ b) Dado el sistema <span class="math notranslate nohighlight">\(\quad\left\{\beg
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="1_BAIN065-24.html"
+       href="1-BAIN065-24.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
         <p class="prev-next-title"><span class="section-number">1. </span>Números Reales y Lenguaje Algebraico</p>
       </div>
+    </a>
+    <a class="right-next"
+       href="3-BAIN065-24.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">3. </span>Polinomios con Coeficientes Reales</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div></div>
   
@@ -550,6 +641,11 @@ b) Dado el sistema <span class="math notranslate nohighlight">\(\quad\left\{\beg
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#metodo-de-gauss">2.3.5. Método de Gauss</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ecuacion-cuadratica">2.4. Ecuación Cuadrática</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#naturaleza-de-las-soluciones">2.4.1. Naturaleza de las Soluciones</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#valor-absoluto-de-un-numero">2.5. Valor Absoluto de un Número</a></li>
 </ul>
   </nav></div>
 
