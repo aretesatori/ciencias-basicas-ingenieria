@@ -4,10 +4,10 @@ parts:
   - caption: Álgebra para Ingeniería
     numbered: true
     chapters:
-    - file: books/BAIN065-24/0_BAIN065-24
-    - file: books/BAIN065-24/1_BAIN065-24
-    - file: books/BAIN065-24/2_BAIN065-24
-    - file: books/BAIN065-24/3_BAIN065-24
+    - file: books/BAIN065-24/1-BAIN065-24
+    - file: books/BAIN065-24/2-BAIN065-24
+    - file: books/BAIN065-24/3-BAIN065-24
+    - file: books/BAIN065-24/4-BAIN065-24
   #- caption: Geometría para Ingeniería
   #  numbered: true
   #  chapters:

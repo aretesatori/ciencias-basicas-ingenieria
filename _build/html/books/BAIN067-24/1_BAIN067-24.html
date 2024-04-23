@@ -1,0 +1,648 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Geometría Plana &#8212; Ciencias Básicas Ingeniería</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'books/BAIN067-24/1_BAIN067-24';</script>
+    <link rel="shortcut icon" href="https://github.githubassets.com/favicons/favicon-dark.svg"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/logo-uach.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../../_static/logo-uach.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../index.html">
+                    Inicio
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Álgebra para Ingeniería</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../BAIN065-24/1-BAIN065-24.html">1. Números Reales y Lenguaje Algebraico</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../BAIN065-24/2-BAIN065-24.html">2. Ecuaciones Algebraicas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../BAIN065-24/3-BAIN065-24.html">3. Polinomios con Coeficientes Reales</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/books/BAIN067-24/1_BAIN067-24.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Geometría Plana</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#punto-linea-y-plano">Punto, Línea y Plano</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#puntos">Puntos</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#angulos">Ángulos</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tipos-de-angulos">Tipos de Ángulos</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#relaciones-entre-angulos">Relaciones entre Ángulos</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rectas-paralelas-y-perpendiculares">Rectas Paralelas y Perpendiculares</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#angulos-opuestos-por-el-vertice-internos-externos-alternos-y-conjugados">Ángulos Opuestos por el Vértice, Internos, Externos, Alternos y Conjugados</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#poligonos">Polígonos</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#elementos-de-un-poligono">Elementos de un Polígono</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#clasificacion">Clasificación</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#perimetro">Perímetro</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#area">Área</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#triangulos">Triángulos</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#elementos-primarios">Elementos Primarios</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Clasificación</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#elementos-secundarios">Elementos Secundarios</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#perimetro-y-area-de-un-triangulo">Perímetro y Área de un Triángulo</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cuadrilateros">Cuadriláteros</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#elementos">Elementos</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Clasificación</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#paralelogramos">Paralelogramos</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#trapecios">Trapecios</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#trapezoides">Trapezoides</a></li>
+</ul>
+</li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#perimetro-y-area-de-un-cuadrilatero">Perímetro y Área de un Cuadrilátero</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#circunferencia-y-circulo">Circunferencia y Círculo</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#circunferencia">Circunferencia</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Elementos</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#circulo">Círculo</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#perimetro-y-area-de-un-circulo">Perímetro y Área de un Círculo</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <h1><ins>Contenido Geometría para Ingeniería</ins></h1>
+<hr class="docutils" />
+<section class="tex2jax_ignore mathjax_ignore" id="geometria-plana">
+<h1>Geometría Plana<a class="headerlink" href="#geometria-plana" title="Permalink to this heading">#</a></h1>
+<section id="punto-linea-y-plano">
+<h2>Punto, Línea y Plano<a class="headerlink" href="#punto-linea-y-plano" title="Permalink to this heading">#</a></h2>
+<p>Definiciones:</p>
+<ul class="simple">
+<li><p><strong>Punto:</strong> Es la unidad más simple y fundamental de la geometría. Corresponde al elemento geométrico sin longitud, ni espesor, elemento de dimensión cero.</p></li>
+<li><p><strong>Recta:</strong> Corresponde a un conjunto de infinitos puntos los cuales se extienden en una sola dirección (no tiene principio ni fin), la cual no tiene espesor, pero sí longitud.</p>
+<ul>
+<li><p><strong>Segmento:</strong> Si sobre una recta <span class="math notranslate nohighlight">\(l\)</span> señalamos un punto <span class="math notranslate nohighlight">\(A\)</span>, se llama semirrecta al conjunto de puntos formados por <span class="math notranslate nohighlight">\(A\)</span> y todos los que le sigue (o todos los que le preceden), inicia en un punto y no tiene fin.</p></li>
+<li><p><strong>Semirecta:</strong> Si sobre una recta <span class="math notranslate nohighlight">\(l\)</span> señalamos dos puntos <span class="math notranslate nohighlight">\(A\)</span> y <span class="math notranslate nohighlight">\(B\)</span>, se llama segmento de recta al conjunto de puntos comprendidos entre <span class="math notranslate nohighlight">\(A\)</span> y <span class="math notranslate nohighlight">\(B\)</span> más estos dos puntos denominados extremos del segmento.</p></li>
+</ul>
+</li>
+<li><p><strong>Plano (<span class="math notranslate nohighlight">\(\Pi\)</span>):</strong> Corresponde a un conjunto de infinitos puntos, el cual posee longitud, ancho, pero no espesor. Es un objeto bidimensional.</p></li>
+</ul>
+<section id="puntos">
+<h3>Puntos<a class="headerlink" href="#puntos" title="Permalink to this heading">#</a></h3>
+</section>
+</section>
+<section id="angulos">
+<h2>Ángulos<a class="headerlink" href="#angulos" title="Permalink to this heading">#</a></h2>
+<p><strong>Definición:</strong> Un ángulo es la abertura formada por dos semirectas llamadas <strong>lados</strong> con un mismo origen llamado <strong>vértice</strong>.</p>
+<ul class="simple">
+<li><p>La medida de un ángulo se considera positiva en sentido antihorario.</p></li>
+</ul>
+<section id="tipos-de-angulos">
+<h3>Tipos de Ángulos<a class="headerlink" href="#tipos-de-angulos" title="Permalink to this heading">#</a></h3>
+<p>Los ángulos se clasifican según su medida en: Recto, Agudo, Obtuso, Llano o Extendido, Reflejo, y Completo.</p>
+<ul class="simple">
+<li><p><strong>Ángulo Agudo</strong>: Es aquel cuya medida es mayor que <span class="math notranslate nohighlight">\(0^{\circ}\)</span> y menor que <span class="math notranslate nohighlight">\(90^{\circ}\)</span>.</p></li>
+<li><p><strong>Ángulo Recto</strong>: Es aquel cuya medida es <span class="math notranslate nohighlight">\(90^{\circ}\)</span>.</p></li>
+<li><p><strong>Ángulo Obtuso</strong>: Es aquel cuya medida está entre <span class="math notranslate nohighlight">\(90^{\circ}\)</span> y <span class="math notranslate nohighlight">\(180^{\circ}\)</span>.</p></li>
+<li><p><strong>Ángulo Llano</strong> o <strong>Extendido</strong>: Es aquel cuya medida es <span class="math notranslate nohighlight">\(180^{\circ}\)</span>.</p></li>
+<li><p><strong>Ángulo Reflejo</strong>: Es aquel cuya medida está entre <span class="math notranslate nohighlight">\(180^{\circ}\)</span> y <span class="math notranslate nohighlight">\(360^{\circ}\)</span>.</p></li>
+<li><p><strong>Ángulo Completo</strong>: Es aquel cuya medida es <span class="math notranslate nohighlight">\(360^{\circ}\)</span>.</p></li>
+</ul>
+</section>
+<section id="relaciones-entre-angulos">
+<h3>Relaciones entre Ángulos<a class="headerlink" href="#relaciones-entre-angulos" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Ángulos Complementarios</strong>: Dos ángulos <span class="math notranslate nohighlight">\(\alpha\)</span> y <span class="math notranslate nohighlight">\(\beta\)</span> se dicen complementarios si la suma de sus medidas es <span class="math notranslate nohighlight">\(90^{\circ}\)</span>, es decir, <span class="math notranslate nohighlight">\(\alpha + \beta = 90^{\circ}\)</span>. En ese sentido se dice que el ángulo <span class="math notranslate nohighlight">\(\alpha\)</span> es el complemento del ángulo <span class="math notranslate nohighlight">\(\beta\)</span> y viceversa.</p></li>
+<li><p><strong>Ángulos Suplementarios</strong>: Dos ángulos <span class="math notranslate nohighlight">\(\alpha\)</span> y <span class="math notranslate nohighlight">\(\beta\)</span> se dicen suplementarios si la suma de sus medidas es <span class="math notranslate nohighlight">\(180^{\circ}\)</span>, es decir, <span class="math notranslate nohighlight">\(\alpha + \beta = 180^{\circ}\)</span>. En ese sentido se dice que el ángulo <span class="math notranslate nohighlight">\(\alpha\)</span> es el suplemento del ángulo <span class="math notranslate nohighlight">\(\beta\)</span> y viceversa.</p></li>
+<li><p><strong>Ángulos Consecutivos</strong>: Dos ángulos se dicen consecutivos si tienen el vértice y un lado en común.</p></li>
+<li><p><strong>Ángulos Adyacentes</strong>: Dos ángulos se dicen adyacentes si son consecutivos y suplementarios simultáneamente.</p></li>
+</ul>
+</section>
+<section id="rectas-paralelas-y-perpendiculares">
+<h3>Rectas Paralelas y Perpendiculares<a class="headerlink" href="#rectas-paralelas-y-perpendiculares" title="Permalink to this heading">#</a></h3>
+<p>Dos rectas distintas <span class="math notranslate nohighlight">\(l\)</span> y <span class="math notranslate nohighlight">\(m\)</span> se dicen paralelas si ellas no tienen puntos en común. Se suele anotar el paralelismo entre las rectas como <span class="math notranslate nohighlight">\(l \mathbin{\|} m\)</span>.</p>
+</section>
+<section id="angulos-opuestos-por-el-vertice-internos-externos-alternos-y-conjugados">
+<h3>Ángulos Opuestos por el Vértice, Internos, Externos, Alternos y Conjugados<a class="headerlink" href="#angulos-opuestos-por-el-vertice-internos-externos-alternos-y-conjugados" title="Permalink to this heading">#</a></h3>
+</section>
+</section>
+<section id="poligonos">
+<h2>Polígonos<a class="headerlink" href="#poligonos" title="Permalink to this heading">#</a></h2>
+<p>Un polígono es una figura geométrica plana cerrada (bidimensional), formada completamente por segmentos de líneas rectas que se intersecan sólo en sus puntos extremos, formando los <strong>vértices</strong>. A estos segmentos de línea se les llama <strong>lados</strong>.</p>
+<section id="elementos-de-un-poligono">
+<h3>Elementos de un Polígono<a class="headerlink" href="#elementos-de-un-poligono" title="Permalink to this heading">#</a></h3>
+<section id="clasificacion">
+<h4>Clasificación<a class="headerlink" href="#clasificacion" title="Permalink to this heading">#</a></h4>
+</section>
+<section id="perimetro">
+<h4>Perímetro<a class="headerlink" href="#perimetro" title="Permalink to this heading">#</a></h4>
+</section>
+<section id="area">
+<h4>Área<a class="headerlink" href="#area" title="Permalink to this heading">#</a></h4>
+</section>
+</section>
+<section id="triangulos">
+<h3>Triángulos<a class="headerlink" href="#triangulos" title="Permalink to this heading">#</a></h3>
+<section id="elementos-primarios">
+<h4>Elementos Primarios<a class="headerlink" href="#elementos-primarios" title="Permalink to this heading">#</a></h4>
+</section>
+<section id="id1">
+<h4>Clasificación<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h4>
+</section>
+<section id="elementos-secundarios">
+<h4>Elementos Secundarios<a class="headerlink" href="#elementos-secundarios" title="Permalink to this heading">#</a></h4>
+</section>
+<section id="perimetro-y-area-de-un-triangulo">
+<h4>Perímetro y Área de un Triángulo<a class="headerlink" href="#perimetro-y-area-de-un-triangulo" title="Permalink to this heading">#</a></h4>
+</section>
+</section>
+<section id="cuadrilateros">
+<h3>Cuadriláteros<a class="headerlink" href="#cuadrilateros" title="Permalink to this heading">#</a></h3>
+<section id="elementos">
+<h4>Elementos<a class="headerlink" href="#elementos" title="Permalink to this heading">#</a></h4>
+</section>
+<section id="id2">
+<h4>Clasificación<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h4>
+<section id="paralelogramos">
+<h5>Paralelogramos<a class="headerlink" href="#paralelogramos" title="Permalink to this heading">#</a></h5>
+</section>
+<section id="trapecios">
+<h5>Trapecios<a class="headerlink" href="#trapecios" title="Permalink to this heading">#</a></h5>
+</section>
+<section id="trapezoides">
+<h5>Trapezoides<a class="headerlink" href="#trapezoides" title="Permalink to this heading">#</a></h5>
+</section>
+</section>
+<section id="perimetro-y-area-de-un-cuadrilatero">
+<h4>Perímetro y Área de un Cuadrilátero<a class="headerlink" href="#perimetro-y-area-de-un-cuadrilatero" title="Permalink to this heading">#</a></h4>
+</section>
+</section>
+</section>
+<section id="circunferencia-y-circulo">
+<h2>Circunferencia y Círculo<a class="headerlink" href="#circunferencia-y-circulo" title="Permalink to this heading">#</a></h2>
+<section id="circunferencia">
+<h3>Circunferencia<a class="headerlink" href="#circunferencia" title="Permalink to this heading">#</a></h3>
+<section id="id3">
+<h4>Elementos<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h4>
+</section>
+</section>
+<section id="circulo">
+<h3>Círculo<a class="headerlink" href="#circulo" title="Permalink to this heading">#</a></h3>
+<section id="perimetro-y-area-de-un-circulo">
+<h4>Perímetro y Área de un Círculo<a class="headerlink" href="#perimetro-y-area-de-un-circulo" title="Permalink to this heading">#</a></h4>
+</section>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./books/BAIN067-24"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#punto-linea-y-plano">Punto, Línea y Plano</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#puntos">Puntos</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#angulos">Ángulos</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tipos-de-angulos">Tipos de Ángulos</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#relaciones-entre-angulos">Relaciones entre Ángulos</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rectas-paralelas-y-perpendiculares">Rectas Paralelas y Perpendiculares</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#angulos-opuestos-por-el-vertice-internos-externos-alternos-y-conjugados">Ángulos Opuestos por el Vértice, Internos, Externos, Alternos y Conjugados</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#poligonos">Polígonos</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#elementos-de-un-poligono">Elementos de un Polígono</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#clasificacion">Clasificación</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#perimetro">Perímetro</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#area">Área</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#triangulos">Triángulos</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#elementos-primarios">Elementos Primarios</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Clasificación</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#elementos-secundarios">Elementos Secundarios</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#perimetro-y-area-de-un-triangulo">Perímetro y Área de un Triángulo</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cuadrilateros">Cuadriláteros</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#elementos">Elementos</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Clasificación</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#paralelogramos">Paralelogramos</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#trapecios">Trapecios</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#trapezoides">Trapezoides</a></li>
+</ul>
+</li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#perimetro-y-area-de-un-cuadrilatero">Perímetro y Área de un Cuadrilátero</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#circunferencia-y-circulo">Circunferencia y Círculo</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#circunferencia">Circunferencia</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Elementos</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#circulo">Círculo</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#perimetro-y-area-de-un-circulo">Perímetro y Área de un Círculo</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Areté Poffart
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

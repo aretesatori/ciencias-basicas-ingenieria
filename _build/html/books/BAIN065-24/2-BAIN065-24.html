@@ -1,0 +1,702 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>2. Ecuaciones Algebraicas &#8212; Ciencias Básicas Ingeniería</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'books/BAIN065-24/2-BAIN065-24';</script>
+    <link rel="shortcut icon" href="https://github.githubassets.com/favicons/favicon-dark.svg"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="3. Polinomios con Coeficientes Reales" href="3-BAIN065-24.html" />
+    <link rel="prev" title="1. Números Reales y Lenguaje Algebraico" href="1-BAIN065-24.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/logo-uach.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../../_static/logo-uach.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../index.html">
+                    Inicio
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Álgebra para Ingeniería</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="1-BAIN065-24.html">1. Números Reales y Lenguaje Algebraico</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">2. Ecuaciones Algebraicas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3-BAIN065-24.html">3. Polinomios con Coeficientes Reales</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/books/BAIN065-24/2-BAIN065-24.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Ecuaciones Algebraicas</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ecuacion-de-primer-grado">2.1. Ecuación de Primer Grado</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sistemas-de-ecuaciones">2.2. Sistemas de Ecuaciones</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sistemas-de-2-times2">2.2.1. Sistemas de 2<span class="math notranslate nohighlight">\(\times\)</span>2</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#metodos-de-resolucion-de-sistemas">2.3. Métodos de Resolución de Sistemas</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#metodo-de-reduccion">2.3.1. Método de Reducción</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#metodo-de-igualacion">2.3.2. Método de Igualación</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#metodo-de-sustitucion">2.3.3. Método de Sustitución</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#metodo-de-cramer">2.3.4. Método de Cramer</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#metodo-de-gauss">2.3.5. Método de Gauss</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ecuacion-cuadratica">2.4. Ecuación Cuadrática</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#naturaleza-de-las-soluciones">2.4.1. Naturaleza de las Soluciones</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#valor-absoluto-de-un-numero">2.5. Valor Absoluto de un Número</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="ecuaciones-algebraicas">
+<h1><span class="section-number">2. </span>Ecuaciones Algebraicas<a class="headerlink" href="#ecuaciones-algebraicas" title="Permalink to this heading">#</a></h1>
+<p>Una ecuación es una igualdad entre expresiones algebraicas que contiene una o más cantidades desconocidas denominadas “incógnitas”. Se clasifican según el número de incógnitas y el grado de la ecuación (es el mayor exponente que contiene la incógnita).</p>
+<section id="ecuacion-de-primer-grado">
+<h2><span class="section-number">2.1. </span>Ecuación de Primer Grado<a class="headerlink" href="#ecuacion-de-primer-grado" title="Permalink to this heading">#</a></h2>
+<p>Es una  ecuación de la forma:
+<span class="math notranslate nohighlight">\(\begin{equation}Ax + B = 0\end{equation}\quad\)</span>
+(con <span class="math notranslate nohighlight">\(A\)</span> y <span class="math notranslate nohighlight">\(B\)</span> Números Reales, y <span class="math notranslate nohighlight">\(x\)</span> la incógnita).</p>
+<ul class="simple">
+<li><p>Conjunto Solución: Son todos los Números Reales que satisfacen la ecuación.</p></li>
+</ul>
+<blockquote>
+<div><p><span class="math notranslate nohighlight">\(\quad\quad E(x) = 0 \quad;\quad S = \{c\in\mathbb{R} \quad : \quad E(c) = 0\}\)</span></p>
+</div></blockquote>
+<p><em>Obs.:<span style="background-color: yellow"></span></em>
+En una ecuación podemos realizar las siguientes operaciones sin cambiar el Conjunto Solución.</p>
+<ul class="simple">
+<li><p>Sumar un mismo número a ambos lados de la igualdad.<span style="background-color: rgb(230, 230, 230)"></span></p></li>
+<li><p>Multiplicar un número distinto de cero a ambos lados de la igualdad.<span style="background-color: rgb(230, 230, 230)"></span></p></li>
+</ul>
+<p><br></br>
+<strong>Ejemplos:</strong> Encuentre el Conjunto Solución.</p>
+<p><span style="background-color: rgb(150, 236, 255)"></span></p>
+<blockquote>
+<div><p>a) <span class="math notranslate nohighlight">\(\quad 3x - 1 = 4\)</span></p>
+<p><span class="math notranslate nohighlight">\(\quad\Leftrightarrow 3x - 1 +(1) = 4 + (1)\)</span></p>
+<p><span class="math notranslate nohighlight">\(\quad\Leftrightarrow 3x = 5\)</span></p>
+<p><span class="math notranslate nohighlight">\(\quad\Leftrightarrow 3x \cdot(\frac{1}{3}) = 5 \cdot(\frac{1}{3})\)</span></p>
+<p><span class="math notranslate nohighlight">\(\quad\Leftrightarrow \frac{3x}{3} = \frac{5}{3}\)</span></p>
+<p><span class="math notranslate nohighlight">\(\quad\Leftrightarrow x = \frac{5}{3}\)</span></p>
+<p>El Conjunto Solución es: <span style="font-size: 12pt"><span class="math notranslate nohighlight">\(\quad S = \{\frac{5}{3}\}\)</span></span></p>
+</div></blockquote>
+<p><br></br><span style="background-color: rgb(150, 236, 255)"></span></p>
+<blockquote>
+<div><p>b) <span class="math notranslate nohighlight">\(\quad x + 3 = 3\cdot(2 - x) + 4\)</span></p>
+<p><span class="math notranslate nohighlight">\(\quad\Leftrightarrow x + 3 = 6 - 3x + 4\)</span></p>
+<p><span class="math notranslate nohighlight">\(\quad\Leftrightarrow x + 3 = 6 - 3x + 4\)</span></p>
+<p><span class="math notranslate nohighlight">\(\quad\Leftrightarrow x + 3 + 3x = 6 - 3x + 4 + 3x\)</span></p>
+<p><span class="math notranslate nohighlight">\(\quad\Leftrightarrow 4x + 3 = 6 + 4\)</span></p>
+<p><span class="math notranslate nohighlight">\(\quad\Leftrightarrow 4x + 3 = 10\)</span></p>
+<p><span class="math notranslate nohighlight">\(\quad\Leftrightarrow 4x + 3 - 3= 10 - 3\)</span></p>
+<p><span class="math notranslate nohighlight">\(\quad\Leftrightarrow 4x = 7\)</span></p>
+<p><span class="math notranslate nohighlight">\(\quad\Leftrightarrow 4x \cdot (\frac{1}{4})= 7 \cdot(\frac{1}{4})\)</span></p>
+<p><span class="math notranslate nohighlight">\(\quad\Leftrightarrow \frac{4x}{4}= \frac{7}{4}\)</span></p>
+<p><span class="math notranslate nohighlight">\(\quad\Leftrightarrow x = \frac{7}{4}\)</span></p>
+<p>El Conjunto Solución es: <span style="font-size: 12pt"><span class="math notranslate nohighlight">\(\quad S = \{\frac{7}{4}\}\)</span></span></p>
+</div></blockquote>
+</section>
+<section id="sistemas-de-ecuaciones">
+<h2><span class="section-number">2.2. </span>Sistemas de Ecuaciones<a class="headerlink" href="#sistemas-de-ecuaciones" title="Permalink to this heading">#</a></h2>
+<section id="sistemas-de-2-times2">
+<h3><span class="section-number">2.2.1. </span>Sistemas de 2<span class="math notranslate nohighlight">\(\times\)</span>2<a class="headerlink" href="#sistemas-de-2-times2" title="Permalink to this heading">#</a></h3>
+<p>Un sistema de ecuaciones lineales de 2 incógnitas y 2 ecuaciones es una expresión del tipo:</p>
+<blockquote>
+<div><p><span class="math notranslate nohighlight">\(\begin{equation}a_{1} \cdot x + b_{1} \cdot y = c_{1} \quad(1)\nonumber\end{equation}\)</span><br />
+<span class="math notranslate nohighlight">\(\begin{equation}a_{2} \cdot x + b_{2} \cdot y = c_{2} \quad(2)\nonumber\end{equation}\)</span></p>
+</div></blockquote>
+<blockquote>
+<div><p>con <span class="math notranslate nohighlight">\(\quad a_{1}\)</span>, <span class="math notranslate nohighlight">\(b_{1}\)</span>, <span class="math notranslate nohighlight">\(c_{1}\)</span>, <span class="math notranslate nohighlight">\(a_{2}\)</span>, <span class="math notranslate nohighlight">\(b_{2}\)</span>, <span class="math notranslate nohighlight">\(c_{2}\in\mathbb{R}\quad\)</span> y <span class="math notranslate nohighlight">\(\quad x\)</span>, <span class="math notranslate nohighlight">\(y\)</span> las incógnitas.</p>
+</div></blockquote>
+<p>Se define el par <span class="math notranslate nohighlight">\((m, n)\)</span> como solución del sistema, si este satisface a ambas ecuaciones.</p>
+<p><em>Obs.:<span style="background-color: yellow"></span></em>
+<span class="math notranslate nohighlight">\(m\)</span> corresponde al valor de <span class="math notranslate nohighlight">\(x\)</span> y <span class="math notranslate nohighlight">\(n\)</span> corresponde al valor de <span class="math notranslate nohighlight">\(y\)</span>.</p>
+<p><br></br>
+<strong>Ejemplos:</strong></p>
+<p><span style="background-color: rgb(150, 236, 255)"></span>
+a) Dado el sistema <span class="math notranslate nohighlight">\(\quad\left\{\begin{array}{ll} 3x - 2y = 4 \\ 4x - 3y = 5 \end{array}\right.\quad\)</span> verifque si <span class="math notranslate nohighlight">\((2, 1)\)</span> es solución.</p>
+<p>Reemplazando el par <span class="math notranslate nohighlight">\((2, 1)\)</span> en ambas ecuaciones tenemos:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p><span class="math notranslate nohighlight">\(\quad\left\{\begin{array}{ll} 3x - 2y = 4 \quad\text{(Ecuación 1)} \\ 4x - 3y = 5 \quad\text{(Ecuación 2)}\end{array}\right.\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\quad\left\{\begin{array}{ll} 3x - 2y = 4 \\ 4x - 3y = 5 \end{array}\right. 
+\quad\Rightarrow\quad 
+\begin{matrix} x = 2 \\ y = 1 \end{matrix}
+\quad\equiv\quad 
+\left\{\begin{array}{ll} 3 \cdot 2 - 2 \cdot 1 = 4 \\ 4 \cdot 2 - 3 \cdot 1 = 5 \end{array}\right.\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\quad\left\{\begin{array}{ll} 6 - 2 = 4 \\ 8 - 3 = 5 \end{array}\right.
+\quad\Leftrightarrow\quad
+\left\{\begin{array}{ll} 4 = 4 \\ 5 = 5 \end{array}\right.\)</span></p></li>
+</ol>
+</div></blockquote>
+<p>En este ejemplo el par satisface ambas ecuaciones, por lo tanto <span class="math notranslate nohighlight">\((2, 1)\)</span> es solución del sistema.</p>
+<p><br></br>
+<span style="background-color: rgb(150, 236, 255)"></span>
+b) Dado el sistema <span class="math notranslate nohighlight">\(\quad\left\{\begin{array}{ll} 3x - 2y = 4 \\ 4x - 3y = 5 \end{array}\right.\quad\)</span> verifque si <span class="math notranslate nohighlight">\((-2, -1)\)</span> es solución.</p>
+<p>Reemplazando el par <span class="math notranslate nohighlight">\((-2, -1)\)</span> en ambas ecuaciones tenemos:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p><span class="math notranslate nohighlight">\(\quad\left\{\begin{array}{ll} 3x - 2y = 4 \quad\text{(Ecuación 1)} \\ 4x - 3y = 5 \quad\text{(Ecuación 2)}\end{array}\right.\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\quad\left\{\begin{array}{ll} 3x - 2y = 4 \\ 4x - 3y = 5 \end{array}\right. 
+\quad\Rightarrow\quad 
+\begin{matrix} x = -2 \\ y = -1 \end{matrix}
+\quad\equiv\quad 
+\left\{\begin{array}{ll} 3 \cdot (- 2) - 2 \cdot (- 1) = 4 \\ 4 \cdot (- 2) - 3 \cdot (- 1) = 5 \end{array}\right.\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\quad\left\{\begin{array}{ll} - 6 + 2 = 4 \\ - 8 + 3 = 5 \end{array}\right.
+\quad\Leftrightarrow\quad
+\left\{\begin{array}{ll} - 4 \neq 4 \\ - 5 \neq 5 \end{array}\right.\)</span></p></li>
+</ol>
+</div></blockquote>
+<p>En este ejemplo el par no satisface ninguna de las ecuaciones, por lo tanto <span class="math notranslate nohighlight">\((-2, -1)\)</span> no es una solución del sistema.</p>
+</section>
+</section>
+<section id="metodos-de-resolucion-de-sistemas">
+<h2><span class="section-number">2.3. </span>Métodos de Resolución de Sistemas<a class="headerlink" href="#metodos-de-resolucion-de-sistemas" title="Permalink to this heading">#</a></h2>
+<section id="metodo-de-reduccion">
+<h3><span class="section-number">2.3.1. </span>Método de Reducción<a class="headerlink" href="#metodo-de-reduccion" title="Permalink to this heading">#</a></h3>
+<p>Consiste en multiplicar una o ambas ecuaciones por un número tal que una de las incógnitas quede con el mismo coeficiente pero de distinto signo. Luego se suman ambas ecuaciones respetando la igualdad y se resuelve la ecuación resultante.</p>
+<p><strong>Ejemplo:</strong></p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p><span class="math notranslate nohighlight">\(\quad\left\{\begin{array}{ll} 3x - 2y = 4 \\ 4x - 3y = 5 \end{array}\right.
+\quad\Leftrightarrow\quad
+\left\{\begin{array}{ll} 3x - 2y = 4 \quad\cdot(3)\\ 4x - 3y = 5 \quad\cdot(- 2)\end{array}\right.\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\quad\left\{\begin{array}{ll} (3)\cdot 3x - (3)\cdot 2y = (3)\cdot 4 \\ (- 2)\cdot 4x - (- 2)\cdot 3y = (- 2)\cdot 5 \end{array}\right.\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\quad\left\{\begin{array}{ll} + 9x - 6y = 12 \\ - 8x + 6y = - 10 \end{array}\right.\quad
+\quad\Leftrightarrow\quad
+\quad+ 9x - 8x - 6y + 6y = 12 - 10\quad\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\quad x + 0 = 2 \quad\Leftrightarrow\quad x = 2\)</span></p></li>
+</ol>
+</div></blockquote>
+<p>Para hallar <span class="math notranslate nohighlight">\(y\)</span>, reemplazamos <span class="math notranslate nohighlight">\(x = 2\)</span> en cualquiera de las ecuaciones, en este caso en la primera ecuación.</p>
+<blockquote>
+<div><ol class="arabic simple" start="5">
+<li><p><span class="math notranslate nohighlight">\(\quad 3x - 2y = 4 \quad\Leftrightarrow\quad 3\cdot(2) - 2y = 4 \quad\Leftrightarrow\quad 6 - 2y = 4\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\quad\Leftrightarrow\quad - (6) + 6 - 2y = - (6) + 4  \quad\Leftrightarrow\quad - 2y = - 2 \quad\Leftrightarrow\quad \cdot(\frac{1}{2}) - 2y = \cdot(\frac{1}{2}) - 2\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\quad\Leftrightarrow\quad - y = - 1 \quad\Leftrightarrow\quad \cdot(- 1) - y = \cdot(- 1) - 1\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\quad\Leftrightarrow\quad y = 1\)</span></p></li>
+</ol>
+</div></blockquote>
+<blockquote>
+<div><p>Conjunto Solución: <span style="font-size: 12pt"><span class="math notranslate nohighlight">\(\quad S = \{(2, 1)\}\)</span></span></p>
+</div></blockquote>
+</section>
+<section id="metodo-de-igualacion">
+<h3><span class="section-number">2.3.2. </span>Método de Igualación<a class="headerlink" href="#metodo-de-igualacion" title="Permalink to this heading">#</a></h3>
+</section>
+<section id="metodo-de-sustitucion">
+<h3><span class="section-number">2.3.3. </span>Método de Sustitución<a class="headerlink" href="#metodo-de-sustitucion" title="Permalink to this heading">#</a></h3>
+</section>
+<section id="metodo-de-cramer">
+<h3><span class="section-number">2.3.4. </span>Método de Cramer<a class="headerlink" href="#metodo-de-cramer" title="Permalink to this heading">#</a></h3>
+</section>
+<section id="metodo-de-gauss">
+<h3><span class="section-number">2.3.5. </span>Método de Gauss<a class="headerlink" href="#metodo-de-gauss" title="Permalink to this heading">#</a></h3>
+</section>
+</section>
+<section id="ecuacion-cuadratica">
+<h2><span class="section-number">2.4. </span>Ecuación Cuadrática<a class="headerlink" href="#ecuacion-cuadratica" title="Permalink to this heading">#</a></h2>
+<p>Una Ecuación Cuadrática o Ecuación de Segundo Grado es una expresión del tipo:</p>
+<blockquote>
+<div><p><span class="math notranslate nohighlight">\(\begin{equation}ax^{2} + bx + c = 0\nonumber\end{equation}\)</span></p>
+</div></blockquote>
+<blockquote>
+<div><p>con <span class="math notranslate nohighlight">\(\quad a\)</span>, <span class="math notranslate nohighlight">\(b\)</span>, <span class="math notranslate nohighlight">\(c \in\mathbb{R}\quad\)</span> y <span class="math notranslate nohighlight">\(\quad x\)</span> la incógnita.</p>
+</div></blockquote>
+<p>Si <span class="math notranslate nohighlight">\(\quad a \neq 0\quad\)</span> la solución de esta ecuación está dada por la fórmula:</p>
+<blockquote>
+<div><p><span style="font-size: 14pt"><span class="math notranslate nohighlight">\(\begin{equation} x = \frac{- b \pm \sqrt{b^{2} - 4 \cdot a \cdot c}}{2 \cdot a} \nonumber\end{equation}\)</span></span></p>
+</div></blockquote>
+<section id="naturaleza-de-las-soluciones">
+<h3><span class="section-number">2.4.1. </span>Naturaleza de las Soluciones<a class="headerlink" href="#naturaleza-de-las-soluciones" title="Permalink to this heading">#</a></h3>
+<p>Se define el discriminante como: <span class="math notranslate nohighlight">\(\quad\Delta = b^2 - 4 \cdot a \cdot c\)</span></p>
+<blockquote>
+<div><p>Si <span class="math notranslate nohighlight">\(\Delta &gt; 0\)</span>, hay <strong>dos Soluciones Reales distintas</strong>.</p>
+<p>Si <span class="math notranslate nohighlight">\(\Delta = 0\)</span>, hay <strong>dos Soluciones Reales e iguales</strong>.</p>
+<p>Si <span class="math notranslate nohighlight">\(\Delta &lt; 0\)</span>, la ecuación <strong>no tiene Soluciones Reales</strong>.</p>
+</div></blockquote>
+<ul class="simple">
+<li><p>Si <span class="math notranslate nohighlight">\(\Delta\geq 0\)</span>, el Conjunto Solución será:</p></li>
+</ul>
+<blockquote>
+<div><p><span class="math notranslate nohighlight">\(\quad\begin{equation}S = \{ \} \end{equation}\)</span></p>
+</div></blockquote>
+<ul class="simple">
+<li><p>Si <span class="math notranslate nohighlight">\(\Delta &lt; 0\)</span>, el Conjunto Solución será vacío:</p></li>
+</ul>
+<blockquote>
+<div><p><span class="math notranslate nohighlight">\(\quad\begin{equation}S = \varnothing\end{equation}\)</span></p>
+</div></blockquote>
+<p><strong>Ejemplos:</strong></p>
+<p>Determine el Conjunto Solución.</p>
+<blockquote>
+<div><p>a) <span class="math notranslate nohighlight">\(\quad x^{2} - 5x - 24 = 0\)</span></p>
+<p><span class="math notranslate nohighlight">\(a = 1\)</span><br />
+<span class="math notranslate nohighlight">\(b = -5\)</span><br />
+<span class="math notranslate nohighlight">\(c = -24\)</span></p>
+<ol class="arabic simple">
+<li><p><span class="math notranslate nohighlight">\(\quad x = \frac{-(-5)\pm\sqrt{(-5)^{2} - 4 \cdot 1 \cdot (-24)}}{2 \cdot 1}\)</span>
+<span class="math notranslate nohighlight">\(\quad\Leftrightarrow\quad x = \frac{5\pm\sqrt{25 + 96}}{2}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\quad x = \frac{5\pm\sqrt{121}}{2}\)</span>
+<span class="math notranslate nohighlight">\(\quad\Leftrightarrow\quad x = \frac{5\pm 11}{2}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\quad x_1 = \frac{5 + 11}{2} \quad\Leftrightarrow\quad x_1 = \frac{16}{2} = 8\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\quad x_2 = \frac{5 - 11}{2} \quad\Leftrightarrow\quad x_2 = \frac{-6}{2} = -3\)</span></p></li>
+</ol>
+<p>El Conjunto Solución es: <span style="font-size: 12pt"><span class="math notranslate nohighlight">\(\quad S = \{8, -3\}\)</span></span></p>
+</div></blockquote>
+</section>
+</section>
+<section id="valor-absoluto-de-un-numero">
+<h2><span class="section-number">2.5. </span>Valor Absoluto de un Número<a class="headerlink" href="#valor-absoluto-de-un-numero" title="Permalink to this heading">#</a></h2>
+<p>Definición matemática del Valor Absoluto:</p>
+<blockquote>
+<div><p><span class="math notranslate nohighlight">\(\quad |x| =
+\left\{
+	\begin{array}{ll}
+		 x  &amp; \mbox{; si } x \geq 0 \\
+		-x &amp; \mbox{; si } x &lt; 0
+	\end{array}
+\right.\)</span></p>
+</div></blockquote>
+<p><strong>Propiedad:</strong></p>
+<blockquote>
+<div><ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\quad |a| = b \quad\Leftrightarrow\quad a = b \quad\vee\quad a = -b\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\quad \sqrt{x^2} \quad=\quad |x| \quad=\quad \left\{\begin{array}{ll}x &amp; \mbox{; si } x \geq 0 \\ -x &amp; \mbox{; si } x &lt; 0\end{array}\right.\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\quad |ax + b| \quad=\quad \left\{\begin{array}{ll}(ax + b) &amp; \mbox{; si } (ax + b) \geq 0 \\ -(ax + b) &amp; \mbox{; si } (ax + b) &lt; 0\end{array}\right.\)</span></p></li>
+</ul>
+</div></blockquote>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./books/BAIN065-24"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="1-BAIN065-24.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">1. </span>Números Reales y Lenguaje Algebraico</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="3-BAIN065-24.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">3. </span>Polinomios con Coeficientes Reales</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ecuacion-de-primer-grado">2.1. Ecuación de Primer Grado</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sistemas-de-ecuaciones">2.2. Sistemas de Ecuaciones</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sistemas-de-2-times2">2.2.1. Sistemas de 2<span class="math notranslate nohighlight">\(\times\)</span>2</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#metodos-de-resolucion-de-sistemas">2.3. Métodos de Resolución de Sistemas</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#metodo-de-reduccion">2.3.1. Método de Reducción</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#metodo-de-igualacion">2.3.2. Método de Igualación</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#metodo-de-sustitucion">2.3.3. Método de Sustitución</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#metodo-de-cramer">2.3.4. Método de Cramer</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#metodo-de-gauss">2.3.5. Método de Gauss</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ecuacion-cuadratica">2.4. Ecuación Cuadrática</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#naturaleza-de-las-soluciones">2.4.1. Naturaleza de las Soluciones</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#valor-absoluto-de-un-numero">2.5. Valor Absoluto de un Número</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Areté Poffart
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

@@ -11,7 +11,7 @@ Link: https://aretesatori.github.io/ciencias-basicas-ingenieria/
 
 > 1. [Números Reales y Lenguaje Algebraico](https://aretesatori.github.io/ciencias-basicas-ingenieria/books/BAIN065-24/1_BAIN065-24.html)
 > 2. [Ecuaciones Algebraicas](https://aretesatori.github.io/ciencias-basicas-ingenieria/books/BAIN065-24/2_BAIN065-24.html)
-> 3. Polinomios con Coeficientes Reales
+> 3. [Polinomios con Coeficientes Reales](https://aretesatori.github.io/ciencias-basicas-ingenieria/books/BAIN065-24/3_BAIN065-24.html)
 > 4. Lógica y Conjuntos
 > 5. Orden en los Números Reales
 > 6. Funciones Reales
@@ -35,8 +35,8 @@ Link: https://aretesatori.github.io/ciencias-basicas-ingenieria/
 ---
 # Contacto
 
-> * Consultas y sugerencias a mi correo electrónico:  
-> [arete.poffart@alumnos.uach.cl](mailto:arete.poffart@alumnos.uach.cl) $\vee$ [aretesatori@gmail.com](mailto:aretesatori@gmail.com)
+* Consultas y sugerencias a mi correo electrónico:  
+[arete.poffart@alumnos.uach.cl](mailto:arete.poffart@alumnos.uach.cl) $\vee$ [aretesatori@gmail.com](mailto:aretesatori@gmail.com)
  
 ---
 # Agradecimiento
