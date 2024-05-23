@@ -8,14 +8,25 @@ parts:
     - file: books/BAIN065-24/2-BAIN065-24
     - file: books/BAIN065-24/3-BAIN065-24
     - file: books/BAIN065-24/4-BAIN065-24
-  #- caption: Geometría para Ingeniería
-  #  numbered: true
-  #  chapters:
-  #   - file: 
-  #  - file: subjects/BAIN067-24/0_BAIN067-24
-  #  - file: subjects/BAIN067-24/1_BAIN067-24
-  #  - file: subjects/BAIN067-24/2_BAIN067-24
-  #- caption: Química para Ingeniería
+    - file: books/BAIN065-24/5-BAIN065-24
+    - file: books/BAIN065-24/6-BAIN065-24
+  - caption: Geometría para Ingeniería
+    numbered: true
+    chapters:
+    - file: books/BAIN067-24/1-BAIN067-24 #Geometría Plana
+      sections:
+      - file: python-tests
+    - file: books/BAIN067-24/2-BAIN067-24 #Geometría Analítica
+      # sections:
+      # - file: books/BAIN067-24/2-1-BAIN067-24 #Lugar Geométrico
+      # - file: books/BAIN067-24/2-2-BAIN067-24 #Regiones en el Plano
+      # - file: books/BAIN067-24/2-3-BAIN067-24 #Recta
+      # - file: books/BAIN067-24/2-4-BAIN067-24 #Circunferencia
+      # - file: books/BAIN067-24/2-5-BAIN067-24 #Elipse
+      # - file: books/BAIN067-24/2-6-BAIN067-24 #Parábola
+      # - file: books/BAIN067-24/2-7-BAIN067-24 #Hipérbola
+    - file: books/BAIN067-24/3-BAIN067-24
+  # - caption: Química para Ingeniería
   #  numbered: true
   #  chapters:
   #  - file: contenidos/unidad3/clase7
