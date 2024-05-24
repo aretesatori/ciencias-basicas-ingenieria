@@ -4,7 +4,7 @@
 title: Ciencias Básicas Ingeniería
 author: Areté Poffart
 copyright: "2024"
-logo: logo-uach.png
+logo: _static/images/logo-uach-light.png
 
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html
