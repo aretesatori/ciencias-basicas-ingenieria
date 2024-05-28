@@ -41,11 +41,11 @@ Link: https://aretesatori.github.io/ciencias-basicas-ingenieria/
 ---
 # Contacto
 
-* Cualquier sugerencia, aporte y/o comentario es bienvenido. 
+Cualquier sugerencia, aporte y/o comentario es bienvenido. 
 * Correo electrónico: [arete.poffart@alumnos.uach.cl](mailto:arete.poffart@alumnos.uach.cl)
  
 ---
-# Agradecimiento $\bigstar$
+# $\bigstar$ Agradecimiento $\bigstar$
 > * Un agradecimiento especial al profesor Pablo Huijse por desarrollar y disponibilizar la plantilla de construcción de libros interactivos en Jupyter Notebook.  
 >
 > * Repositorio del proyecto: https://github.com/phuijse/JupyterBookUACh  
