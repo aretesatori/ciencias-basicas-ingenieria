@@ -54,6 +54,7 @@
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/pydata-sphinx-theme.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
@@ -144,8 +145,8 @@ const thebe_selector_output = ".output, .cell_output"
       
     
     
-    <img src="../_static/logo-uach.png" class="logo__image only-light" alt="Logo image"/>
-    <script>document.write(`<img src="../_static/logo-uach.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+    <img src="../_static/logo-uach-light.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../_static/logo-uach-light.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
   
   
 </a></div>
@@ -164,6 +165,24 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="BAIN065-24/1-BAIN065-24.html">1. Números Reales y Lenguaje Algebraico</a></li>
 <li class="toctree-l1"><a class="reference internal" href="BAIN065-24/2-BAIN065-24.html">2. Ecuaciones Algebraicas</a></li>
 <li class="toctree-l1"><a class="reference internal" href="BAIN065-24/3-BAIN065-24.html">3. Polinomios con Coeficientes Reales</a></li>
+<li class="toctree-l1"><a class="reference internal" href="BAIN065-24/4-BAIN065-24.html">4. Lógica y Conjuntos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="BAIN065-24/5-BAIN065-24.html">5. Orden en los Números Reales</a></li>
+<li class="toctree-l1"><a class="reference internal" href="BAIN065-24/6-BAIN065-24.html">6. Funciones de Variable Real</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Geometría para Ingeniería</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="BAIN067-24/1-BAIN067-24.html">7. Geometría Plana</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../python-tests.html">7.7. Tabla Trigonométrica de Ángulos</a></li>
+
+
+
+
+
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="BAIN067-24/2-BAIN067-24.html">8. Geometría Analítica</a></li>
+<li class="toctree-l1"><a class="reference internal" href="BAIN067-24/3-BAIN067-24.html">9. Geometría Vectorial</a></li>
+
 </ul>
 
     </div>
@@ -312,23 +331,25 @@ document.write(`
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Inicio</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#asignaturas">Asignaturas</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bain065-24-algebra-para-ingenieria">BAIN065-24 | Álgebra para Ingeniería</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contenido">Contenido</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#algebra-para-ingenieria">Álgebra para Ingeniería</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contenido-bain065-24">Contenido (BAIN065-24)</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bain067-24-geometria-para-ingenieria">BAIN067-24 | Geometría para Ingeniería</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Contenido</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#geometria-para-ingenieria">Geometría para Ingeniería</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contenido-bain067-24">Contenido (BAIN067-24)</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bain069-14-quimica-para-ingenieria">BAIN069-14 | Química para Ingeniería</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Contenido</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quimica-para-ingenieria">Química para Ingeniería</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contenido-bain069-24">Contenido (BAIN069-24)</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#referencias">Referencias</a></li>
 </ul>
 </li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#bibliografia">Bibliografía</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#contacto">Contacto</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#agradecimiento">Agradecimiento</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#agradecimiento">Agradecimiento</a><ul class="visible nav section-nav flex-column">
+</ul>
+</li>
 </ul>
 
             </nav>
@@ -343,62 +364,66 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="inicio">
 <h1>Inicio<a class="headerlink" href="#inicio" title="Permalink to this heading">#</a></h1>
-<p>Este es un repositorio con apuntes de contenidos de Ciencias Básicas, del plan de Bachillerato en Ciencias de la Ingeniería. UACh 2024.</p>
+<p>Este libro digital tiene como objetivo reunir de forma resumida, simplificada e interactiva, los contenidos de <strong>ciencias básicas</strong> correspondientes al plan de <a class="reference external" href="https://www.uach.cl/dw/admision/plandeestudio.php?car=1807">Bachillerato en Ciencias de la Ingeniería</a> (Plan Común).</p>
+<p>Este proyecto está en constante desarrollo. El código fuente se encuentra en: <a class="github reference external" href="https://github.com/aretesatori/ciencias-basicas-ingenieria">aretesatori/ciencias-basicas-ingenieria</a>.</p>
+<p>Los contenidos que se encuentran a continuación están basados específicamente en los programas de las asignaturas de plan común (vigentes al año 2024), impartidas a las carreras de ingeniería por la <a class="reference external" href="https://ingenieria.uach.cl/">Universidad Austral de Chile</a>.</p>
+<!--Este recurso fue desarrollado utilizando el entorno Jupyter Notebook, para posteriormente ser exportado en formato de página web utilizando Sphinx y una plantilla predeterminada. Se han utilizado principalmente los lenguajes Markdown y HTML para la estructura, Python para cargar las aplicaciones interactivas, LaTeX para generar las ecuaciones y símbolos, CSS y Javascript. Se requiere del uso de MathJax para renderizar el código LaTeX en el navegador web. -->
 </section>
 <hr class="docutils" />
 <section class="tex2jax_ignore mathjax_ignore" id="asignaturas">
 <h1>Asignaturas<a class="headerlink" href="#asignaturas" title="Permalink to this heading">#</a></h1>
-<section id="bain065-24-algebra-para-ingenieria">
-<h2>BAIN065-24 | Álgebra para Ingeniería<a class="headerlink" href="#bain065-24-algebra-para-ingenieria" title="Permalink to this heading">#</a></h2>
-<section id="contenido">
-<h3>Contenido<a class="headerlink" href="#contenido" title="Permalink to this heading">#</a></h3>
+<section id="algebra-para-ingenieria">
+<h2>Álgebra para Ingeniería<a class="headerlink" href="#algebra-para-ingenieria" title="Permalink to this heading">#</a></h2>
+<section id="contenido-bain065-24">
+<h3>Contenido (BAIN065-24)<a class="headerlink" href="#contenido-bain065-24" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p><strong>Unidad 1:</strong> <a class="reference external" href="https://aretesatori.github.io/ciencias-basicas-ingenieria/books/BAIN065-24/1-BAIN065-24.html">Números Reales y Lenguaje Algebraico</a></p></li>
 <li><p><strong>Unidad 2:</strong> <a class="reference external" href="https://aretesatori.github.io/ciencias-basicas-ingenieria/books/BAIN065-24/2-BAIN065-24.html">Ecuaciones Algebraicas</a></p></li>
 <li><p><strong>Unidad 3:</strong> <a class="reference external" href="https://aretesatori.github.io/ciencias-basicas-ingenieria/books/BAIN065-24/3-BAIN065-24.html">Polinomios con Coeficientes Reales</a></p></li>
-<li><p><strong>Unidad 4:</strong> Lógica y Conjuntos</p></li>
+<li><p><strong>Unidad 4:</strong> <a class="reference external" href="https://aretesatori.github.io/ciencias-basicas-ingenieria/books/BAIN065-24/4-BAIN065-24.html">Lógica y Conjuntos</a></p></li>
 <li><p><strong>Unidad 5:</strong> Orden en los Números Reales</p></li>
 <li><p><strong>Unidad 6:</strong> Funciones Reales</p></li>
 <li><p><strong>Unidad 7:</strong> Límites y Continuidad</p></li>
 </ul>
 </section>
 </section>
-<section id="bain067-24-geometria-para-ingenieria">
-<h2>BAIN067-24 | Geometría para Ingeniería<a class="headerlink" href="#bain067-24-geometria-para-ingenieria" title="Permalink to this heading">#</a></h2>
-<section id="id1">
-<h3>Contenido<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>
+<section id="geometria-para-ingenieria">
+<h2>Geometría para Ingeniería<a class="headerlink" href="#geometria-para-ingenieria" title="Permalink to this heading">#</a></h2>
+<section id="contenido-bain067-24">
+<h3>Contenido (BAIN067-24)<a class="headerlink" href="#contenido-bain067-24" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
-<li><p><strong>Unidad 1:</strong> <span class="xref myst">Geometría Plana</span></p></li>
+<li><p><strong>Unidad 1:</strong> Geometría Plana</p></li>
 <li><p><strong>Unidad 2:</strong> Geometría Analítica</p></li>
 <li><p><strong>Unidad 3:</strong> Geometría Vectorial</p></li>
 <li><p><strong>Unidad 4:</strong> Funciones Trigonométricas, Coordenadas Polares y Números Complejos</p></li>
 </ul>
 </section>
 </section>
-<section id="bain069-14-quimica-para-ingenieria">
-<h2>BAIN069-14 | Química para Ingeniería<a class="headerlink" href="#bain069-14-quimica-para-ingenieria" title="Permalink to this heading">#</a></h2>
-<section id="id2">
-<h3>Contenido<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h3>
+<section id="quimica-para-ingenieria">
+<h2>Química para Ingeniería<a class="headerlink" href="#quimica-para-ingenieria" title="Permalink to this heading">#</a></h2>
+<section id="contenido-bain069-24">
+<h3>Contenido (BAIN069-24)<a class="headerlink" href="#contenido-bain069-24" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
-<li><p><strong>[En desarrollo]</strong></p></li>
-<li><p><strong>[En desarrollo]</strong></p></li>
-<li><p><strong>[En desarrollo]</strong></p></li>
+<li><p><strong>[No disponible]</strong></p></li>
 </ul>
 </section>
 </section>
-<section id="referencias">
-<h2>Referencias<a class="headerlink" href="#referencias" title="Permalink to this heading">#</a></h2>
-<ul class="simple">
-<li><p><strong>[En desarrollo]</strong></p></li>
-</ul>
 </section>
+<hr class="docutils" />
+<section class="tex2jax_ignore mathjax_ignore" id="bibliografia">
+<h1>Bibliografía<a class="headerlink" href="#bibliografia" title="Permalink to this heading">#</a></h1>
+<ul class="simple">
+<li><p>SiveducMD (<a class="reference external" href="https://siveducmd.uach.cl/">https://siveducmd.uach.cl/</a>).</p></li>
+<li><p>Mikenberg, I. F. (2013). <a class="reference external" href="https://www.ing.uc.cl/wp-content/uploads/2017/07/Prec%C3%A1lculo.pdf">Álgebra e Introducción al Cálculo</a>. Pontificia Universidad Católica de Chile.</p></li>
+<li><p>GeoGebra. (<a class="reference external" href="https://www.geogebra.org/u/aretesatori">https://www.geogebra.org/u/aretesatori</a>).</p></li>
+</ul>
 </section>
 <hr class="docutils" />
 <section class="tex2jax_ignore mathjax_ignore" id="contacto">
 <h1>Contacto<a class="headerlink" href="#contacto" title="Permalink to this heading">#</a></h1>
+<p>Cualquier sugerencia, contribución y/o comentario es bienvenido.</p>
 <ul class="simple">
-<li><p>Consultas y sugerencias a mi correo electrónico:<br />
-<a class="reference external" href="mailto:arete&#46;poffart&#37;&#52;&#48;alumnos&#46;uach&#46;cl">arete<span>&#46;</span>poffart<span>&#64;</span>alumnos<span>&#46;</span>uach<span>&#46;</span>cl</a> <span class="math notranslate nohighlight">\(\vee\)</span> <a class="reference external" href="mailto:aretesatori&#37;&#52;&#48;gmail&#46;com">aretesatori<span>&#64;</span>gmail<span>&#46;</span>com</a></p></li>
+<li><p>Correo electrónico: <a class="reference external" href="mailto:arete&#46;poffart&#37;&#52;&#48;alumnos&#46;uach&#46;cl">arete<span>&#46;</span>poffart<span>&#64;</span>alumnos<span>&#46;</span>uach<span>&#46;</span>cl</a></p></li>
 </ul>
 </section>
 <hr class="docutils" />
@@ -407,11 +432,15 @@ document.write(`
 <blockquote>
 <div><div class="math notranslate nohighlight">
 \[\bigstar\quad\bigstar\quad\bigstar\quad\bigstar\quad\bigstar\]</div>
-<p><strong>Un agradecimiento especial al profesor Pablo Huijse:</strong> <em>por desarrollar y disponibilizar la plantilla de construcción de libros interactivos en Jupyter Notebook.</em><br />
-Repositorio del proyecto: <a class="github reference external" href="https://github.com/phuijse/JupyterBookUACh">phuijse/JupyterBookUACh</a></p>
+<ul class="simple">
+<li><p><strong>Un agradecimiento especial al profesor Pablo Huijse:</strong> por desarrollar y disponibilizar la plantilla de construcción de libros interactivos en Jupyter Notebook.</p></li>
+<li><p>Repositorio del proyecto: <a class="github reference external" href="https://github.com/phuijse/JupyterBookUACh">phuijse/JupyterBookUACh</a></p></li>
+</ul>
 <div class="math notranslate nohighlight">
 \[\bigstar\quad\bigstar\quad\bigstar\quad\bigstar\quad\bigstar\]</div>
 </div></blockquote>
+<div class="toctree-wrapper compound">
+</div>
 <div class="toctree-wrapper compound">
 </div>
 </section>
@@ -476,23 +505,25 @@ Repositorio del proyecto: <a class="github reference external" href="https://git
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Inicio</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#asignaturas">Asignaturas</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bain065-24-algebra-para-ingenieria">BAIN065-24 | Álgebra para Ingeniería</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contenido">Contenido</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#algebra-para-ingenieria">Álgebra para Ingeniería</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contenido-bain065-24">Contenido (BAIN065-24)</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bain067-24-geometria-para-ingenieria">BAIN067-24 | Geometría para Ingeniería</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Contenido</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#geometria-para-ingenieria">Geometría para Ingeniería</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contenido-bain067-24">Contenido (BAIN067-24)</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bain069-14-quimica-para-ingenieria">BAIN069-14 | Química para Ingeniería</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Contenido</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quimica-para-ingenieria">Química para Ingeniería</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contenido-bain069-24">Contenido (BAIN069-24)</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#referencias">Referencias</a></li>
 </ul>
 </li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#bibliografia">Bibliografía</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#contacto">Contacto</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#agradecimiento">Agradecimiento</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#agradecimiento">Agradecimiento</a><ul class="visible nav section-nav flex-column">
+</ul>
+</li>
 </ul>
 
   </nav></div>

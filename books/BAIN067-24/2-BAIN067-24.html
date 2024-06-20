@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Geometría Analítica &#8212; Ciencias Básicas Ingeniería</title>
+    <title>8. Geometría Analítica &#8212; Ciencias Básicas Ingeniería</title>
   
   
   
@@ -54,6 +54,7 @@
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/pydata-sphinx-theme.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
@@ -64,10 +65,12 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'books/BAIN067-24/2_BAIN067-24';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'books/BAIN067-24/2-BAIN067-24';</script>
     <link rel="shortcut icon" href="https://github.githubassets.com/favicons/favicon-dark.svg"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="9. Geometría Vectorial" href="3-BAIN067-24.html" />
+    <link rel="prev" title="7.7. Tabla Trigonométrica de Ángulos" href="../../python-tests.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -143,8 +146,8 @@ const thebe_selector_output = ".output, .cell_output"
       
     
     
-    <img src="../../_static/logo-uach.png" class="logo__image only-light" alt="Logo image"/>
-    <script>document.write(`<img src="../../_static/logo-uach.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+    <img src="../../_static/logo-uach-light.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../../_static/logo-uach-light.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
   
   
 </a></div>
@@ -163,6 +166,24 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../BAIN065-24/1-BAIN065-24.html">1. Números Reales y Lenguaje Algebraico</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../BAIN065-24/2-BAIN065-24.html">2. Ecuaciones Algebraicas</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../BAIN065-24/3-BAIN065-24.html">3. Polinomios con Coeficientes Reales</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../BAIN065-24/4-BAIN065-24.html">4. Lógica y Conjuntos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../BAIN065-24/5-BAIN065-24.html">5. Orden en los Números Reales</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../BAIN065-24/6-BAIN065-24.html">6. Funciones de Variable Real</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Geometría para Ingeniería</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="1-BAIN067-24.html">7. Geometría Plana</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../python-tests.html">7.7. Tabla Trigonométrica de Ángulos</a></li>
+
+
+
+
+
+</ul>
+</li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">8. Geometría Analítica</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3-BAIN067-24.html">9. Geometría Vectorial</a></li>
+
 </ul>
 
     </div>
@@ -217,7 +238,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../../_sources/books/BAIN067-24/2_BAIN067-24.ipynb" target="_blank"
+      <li><a href="../../_sources/books/BAIN067-24/2-BAIN067-24.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -309,8 +330,24 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#plano-cartesiano">Plano Cartesiano</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#distancia-entre-2-puntos">Distancia entre 2 Puntos</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#plano-cartesiano">8.1. Plano Cartesiano</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#distancia-entre-dos-puntos">8.2. Distancia entre dos Puntos</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lugar-geometrico">8.3. Lugar Geométrico</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#regiones-en-el-plano">8.4. Regiones en el Plano</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#recta">8.5. Recta</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ecuaciones-de-la-recta">8.5.1. Ecuaciones de la Recta</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#ecuacion-general">8.5.1.1. Ecuación General</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#ecuacion-estandar">8.5.1.2. Ecuación Estándar</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#ecuacion-punto-punto">8.5.1.3. Ecuación Punto-Punto</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#ecuacion-punto-pendiente">8.5.1.4. Ecuación Punto-Pendiente</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#circunferencia">8.6. Circunferencia</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#elipse">8.7. Elipse</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#parabola">8.8. Parábola</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hiperbola">8.9. Hipérbola</a></li>
 </ul>
             </nav>
         </div>
@@ -323,13 +360,65 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="geometria-analitica">
-<h1>Geometría Analítica<a class="headerlink" href="#geometria-analitica" title="Permalink to this heading">#</a></h1>
+<h1><span class="section-number">8. </span>Geometría Analítica<a class="headerlink" href="#geometria-analitica" title="Permalink to this heading">#</a></h1>
 <section id="plano-cartesiano">
-<h2>Plano Cartesiano<a class="headerlink" href="#plano-cartesiano" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">8.1. </span>Plano Cartesiano<a class="headerlink" href="#plano-cartesiano" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Primer Cuadrante<br />
+<span class="math notranslate nohighlight">\(\{(x, y) \in\mathbb{R^2} \quad:\quad x &gt; 0 \quad\wedge\quad y &gt; 0\}\)</span></p></li>
+<li><p>Segundo Cuadrante<br />
+<span class="math notranslate nohighlight">\(\{(x, y) \in\mathbb{R^2} \quad:\quad x &lt; 0 \quad\wedge\quad y &gt; 0\}\)</span></p></li>
+<li><p>Tercer Cuadrante<br />
+<span class="math notranslate nohighlight">\(\{(x, y) \in\mathbb{R^2} \quad:\quad x &lt; 0 \quad\wedge\quad y &lt; 0\}\)</span></p></li>
+<li><p>Cuarto Cuadrante<br />
+<span class="math notranslate nohighlight">\(\{(x, y) \in\mathbb{R^2} \quad:\quad x &gt; 0 \quad\wedge\quad y &lt; 0\}\)</span></p></li>
+</ul>
 </section>
-<section id="distancia-entre-2-puntos">
-<h2>Distancia entre 2 Puntos<a class="headerlink" href="#distancia-entre-2-puntos" title="Permalink to this heading">#</a></h2>
-<p><span class="math notranslate nohighlight">\(d(P, Q) = \sqrt{(x_{2} - x_{1})^2 + (y_{2} - y_{1})^2}\)</span></p>
+<section id="distancia-entre-dos-puntos">
+<h2><span class="section-number">8.2. </span>Distancia entre dos Puntos<a class="headerlink" href="#distancia-entre-dos-puntos" title="Permalink to this heading">#</a></h2>
+<p>Dados los puntos <span class="math notranslate nohighlight">\(\quad P(x_1, y_1)\)</span>, <span class="math notranslate nohighlight">\(\quad Q(x_2, y_2)\quad\)</span>, la distancia entre <span class="math notranslate nohighlight">\(P\)</span> y <span class="math notranslate nohighlight">\(Q\)</span> está dada por la fórmula:</p>
+<blockquote>
+<div><p><span class="math notranslate nohighlight">\(\quad d(P, Q) = \sqrt{(x_{2} - x_{1})^2 + (y_{2} - y_{1})^2}\)</span></p>
+</div></blockquote>
+</section>
+<section id="lugar-geometrico">
+<h2><span class="section-number">8.3. </span>Lugar Geométrico<a class="headerlink" href="#lugar-geometrico" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="regiones-en-el-plano">
+<h2><span class="section-number">8.4. </span>Regiones en el Plano<a class="headerlink" href="#regiones-en-el-plano" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="recta">
+<h2><span class="section-number">8.5. </span>Recta<a class="headerlink" href="#recta" title="Permalink to this heading">#</a></h2>
+<section id="ecuaciones-de-la-recta">
+<h3><span class="section-number">8.5.1. </span>Ecuaciones de la Recta<a class="headerlink" href="#ecuaciones-de-la-recta" title="Permalink to this heading">#</a></h3>
+<section id="ecuacion-general">
+<h4><span class="section-number">8.5.1.1. </span>Ecuación General<a class="headerlink" href="#ecuacion-general" title="Permalink to this heading">#</a></h4>
+<div class="math notranslate nohighlight">
+\[L: ax + by + c = 0\]</div>
+</section>
+<section id="ecuacion-estandar">
+<h4><span class="section-number">8.5.1.2. </span>Ecuación Estándar<a class="headerlink" href="#ecuacion-estandar" title="Permalink to this heading">#</a></h4>
+</section>
+<section id="ecuacion-punto-punto">
+<h4><span class="section-number">8.5.1.3. </span>Ecuación Punto-Punto<a class="headerlink" href="#ecuacion-punto-punto" title="Permalink to this heading">#</a></h4>
+</section>
+<section id="ecuacion-punto-pendiente">
+<h4><span class="section-number">8.5.1.4. </span>Ecuación Punto-Pendiente<a class="headerlink" href="#ecuacion-punto-pendiente" title="Permalink to this heading">#</a></h4>
+</section>
+</section>
+</section>
+<section id="circunferencia">
+<h2><span class="section-number">8.6. </span>Circunferencia<a class="headerlink" href="#circunferencia" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="elipse">
+<h2><span class="section-number">8.7. </span>Elipse<a class="headerlink" href="#elipse" title="Permalink to this heading">#</a></h2>
+<p>Se define <strong>elipse</strong> como el lugar geométrico de todos los puntos del plano, tales que la suma de sus distancias a dos puntos fijos (<span class="math notranslate nohighlight">\(F1\)</span> y <span class="math notranslate nohighlight">\(F2\)</span>), llamados <strong>focos</strong>, es una constante positiva (<span class="math notranslate nohighlight">\(2a\)</span>).</p>
+</section>
+<section id="parabola">
+<h2><span class="section-number">8.8. </span>Parábola<a class="headerlink" href="#parabola" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="hiperbola">
+<h2><span class="section-number">8.9. </span>Hipérbola<a class="headerlink" href="#hiperbola" title="Permalink to this heading">#</a></h2>
 </section>
 </section>
 
@@ -364,6 +453,24 @@ document.write(`
   
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="../../python-tests.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">7.7. </span>Tabla Trigonométrica de Ángulos</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="3-BAIN067-24.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">9. </span>Geometría Vectorial</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div></div>
   
 </div>
@@ -382,8 +489,24 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#plano-cartesiano">Plano Cartesiano</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#distancia-entre-2-puntos">Distancia entre 2 Puntos</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#plano-cartesiano">8.1. Plano Cartesiano</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#distancia-entre-dos-puntos">8.2. Distancia entre dos Puntos</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lugar-geometrico">8.3. Lugar Geométrico</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#regiones-en-el-plano">8.4. Regiones en el Plano</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#recta">8.5. Recta</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ecuaciones-de-la-recta">8.5.1. Ecuaciones de la Recta</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#ecuacion-general">8.5.1.1. Ecuación General</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#ecuacion-estandar">8.5.1.2. Ecuación Estándar</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#ecuacion-punto-punto">8.5.1.3. Ecuación Punto-Punto</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#ecuacion-punto-pendiente">8.5.1.4. Ecuación Punto-Pendiente</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#circunferencia">8.6. Circunferencia</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#elipse">8.7. Elipse</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#parabola">8.8. Parábola</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hiperbola">8.9. Hipérbola</a></li>
 </ul>
   </nav></div>
 

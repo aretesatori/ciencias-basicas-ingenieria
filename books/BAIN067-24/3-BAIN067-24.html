@@ -1,0 +1,719 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>9. Geometría Vectorial &#8212; Ciencias Básicas Ingeniería</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/pydata-sphinx-theme.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'books/BAIN067-24/3-BAIN067-24';</script>
+    <link rel="shortcut icon" href="https://github.githubassets.com/favicons/favicon-dark.svg"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="prev" title="8. Geometría Analítica" href="2-BAIN067-24.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/logo-uach-light.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../../_static/logo-uach-light.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../index.html">
+                    Inicio
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Álgebra para Ingeniería</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../BAIN065-24/1-BAIN065-24.html">1. Números Reales y Lenguaje Algebraico</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../BAIN065-24/2-BAIN065-24.html">2. Ecuaciones Algebraicas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../BAIN065-24/3-BAIN065-24.html">3. Polinomios con Coeficientes Reales</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../BAIN065-24/4-BAIN065-24.html">4. Lógica y Conjuntos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../BAIN065-24/5-BAIN065-24.html">5. Orden en los Números Reales</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../BAIN065-24/6-BAIN065-24.html">6. Funciones de Variable Real</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Geometría para Ingeniería</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="1-BAIN067-24.html">7. Geometría Plana</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../python-tests.html">7.7. Tabla Trigonométrica de Ángulos</a></li>
+
+
+
+
+
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="2-BAIN067-24.html">8. Geometría Analítica</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">9. Geometría Vectorial</a></li>
+
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/books/BAIN067-24/3-BAIN067-24.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Geometría Vectorial</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">9. Geometría Vectorial</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operatoria-en-mathbb-r-n">9.1. Operatoria en <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#igualdad-de-vectores">9.1.1. Igualdad de Vectores</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#suma-de-vectores">9.1.2. Suma de Vectores</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#multiplicacion-por-escalar">9.1.3. Multiplicación por Escalar</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#norma-o-modulo">9.2. Norma o Módulo</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vectores-unitarios">9.3. Vectores Unitarios</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#producto-punto">9.4. Producto Punto</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#propiedades">9.4.1. Propiedades</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#angulo-entre-vectores">9.5. Ángulo entre Vectores</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#producto-cruz">9.6. Producto Cruz</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">9.6.1. Propiedades</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#resumen-de-geometria-vectorial">10. Resumen de Geometría Vectorial</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definiciones-basicas">10.1. Definiciones Básicas</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vector">10.1.1. Vector</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#magnitud-de-un-vector">10.1.2. Magnitud de un Vector</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">10.1.3. Suma de Vectores</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#producto-por-un-escalar">10.1.4. Producto por un Escalar</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#propiedades-de-los-vectores">10.2. Propiedades de los Vectores</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#producto-escalar">10.3. Producto Escalar</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#producto-vectorial">10.4. Producto Vectorial</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ejemplos">10.5. Ejemplos</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ejemplo-de-suma-de-vectores">10.5.1. Ejemplo de Suma de Vectores</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ejemplo-de-producto-escalar">10.5.2. Ejemplo de Producto Escalar</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ejemplo-de-producto-vectorial">10.5.3. Ejemplo de Producto Vectorial</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#geogebra">10.6. GeoGebra</a></li>
+</ul>
+</li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="geometria-vectorial">
+<h1><span class="section-number">9. </span>Geometría Vectorial<a class="headerlink" href="#geometria-vectorial" title="Permalink to this heading">#</a></h1>
+<p>Espacio vectorial.</p>
+<p><span class="math notranslate nohighlight">\(\mathbb{R}^n \quad=\quad \{\overrightarrow{\rm v} = (v_1, v_2, v_3, ..., v_n) : v_1, v_2, v_3, ..., v_n \in\mathbb{R}\}\)</span></p>
+<blockquote>
+<div><p><span class="math notranslate nohighlight">\(v_1, v_2, v_3, ..., v_n \quad\)</span> : Componentes del Vector</p>
+</div></blockquote>
+<section id="operatoria-en-mathbb-r-n">
+<h2><span class="section-number">9.1. </span>Operatoria en <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span><a class="headerlink" href="#operatoria-en-mathbb-r-n" title="Permalink to this heading">#</a></h2>
+<section id="igualdad-de-vectores">
+<h3><span class="section-number">9.1.1. </span>Igualdad de Vectores<a class="headerlink" href="#igualdad-de-vectores" title="Permalink to this heading">#</a></h3>
+</section>
+<section id="suma-de-vectores">
+<h3><span class="section-number">9.1.2. </span>Suma de Vectores<a class="headerlink" href="#suma-de-vectores" title="Permalink to this heading">#</a></h3>
+</section>
+<section id="multiplicacion-por-escalar">
+<h3><span class="section-number">9.1.3. </span>Multiplicación por Escalar<a class="headerlink" href="#multiplicacion-por-escalar" title="Permalink to this heading">#</a></h3>
+<blockquote>
+<div><p><span class="math notranslate nohighlight">\(k \in\mathbb{R} \quad,\quad \overrightarrow{\rm v} \in \mathbb{R}^n\)</span></p>
+</div></blockquote>
+<blockquote>
+<div><p><span class="math notranslate nohighlight">\(k \cdot \overrightarrow{\rm v} \quad=\quad (k \cdot v_1, k \cdot v_2, k \cdot v_3, ..., k \cdot v_n)\)</span></p>
+</div></blockquote>
+</section>
+</section>
+<section id="norma-o-modulo">
+<h2><span class="section-number">9.2. </span>Norma o Módulo<a class="headerlink" href="#norma-o-modulo" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="vectores-unitarios">
+<h2><span class="section-number">9.3. </span>Vectores Unitarios<a class="headerlink" href="#vectores-unitarios" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="producto-punto">
+<h2><span class="section-number">9.4. </span>Producto Punto<a class="headerlink" href="#producto-punto" title="Permalink to this heading">#</a></h2>
+<p>Sean <span class="math notranslate nohighlight">\(\overrightarrow{\rm u}\)</span>, <span class="math notranslate nohighlight">\(\overrightarrow{\rm v}\)</span> <span class="math notranslate nohighlight">\(\in \mathbb{R}^n\)</span>, se define el <strong>Producto Punto</strong> entre <span class="math notranslate nohighlight">\(\overrightarrow{\rm u}\)</span>, <span class="math notranslate nohighlight">\(\overrightarrow{\rm v}\)</span> denotado por <span class="math notranslate nohighlight">\(\overrightarrow{\rm u} \bullet \overrightarrow{\rm v}\)</span> como:</p>
+<div class="math notranslate nohighlight">
+\[\overrightarrow{\rm u} \bullet \overrightarrow{\rm v} \quad=\quad \sum_{i = 1}^n (\rm u_i \cdot \rm v_i) \quad=\quad ((\rm u_1 \cdot \rm v_1) + (\rm u_2 \cdot \rm v_2) + (\rm u_3 \cdot \rm v_3) + (...) + (\rm u_n \cdot \rm v_n))\]</div>
+<p>Ejemplo:</p>
+<p>Sean <span class="math notranslate nohighlight">\(\overrightarrow{\rm u} = (1, 2, 3)\)</span>; <span class="math notranslate nohighlight">\(\overrightarrow{\rm v} = (6, 5, 4)\)</span>.</p>
+<p><span class="math notranslate nohighlight">\(\overrightarrow{\rm u} \bullet \overrightarrow{\rm v} = (1 \cdot 6 + 2 \cdot 5 + 3 \cdot 4) = (6 + 10 + 12) = 28\)</span></p>
+<section id="propiedades">
+<h3><span class="section-number">9.4.1. </span>Propiedades<a class="headerlink" href="#propiedades" title="Permalink to this heading">#</a></h3>
+<p>Sean <span class="math notranslate nohighlight">\(\overrightarrow{\rm u}\)</span>, <span class="math notranslate nohighlight">\(\overrightarrow{\rm v}\)</span>, <span class="math notranslate nohighlight">\(\overrightarrow{\rm w}\)</span> <span class="math notranslate nohighlight">\(\in \mathbb{R}^n\)</span>, <span class="math notranslate nohighlight">\(k \in \mathbb{R}\)</span>, se cumplen las siguientes propiedades.</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\overrightarrow{\rm u} \bullet \overrightarrow{\rm v} = \overrightarrow{\rm v} \bullet \overrightarrow{\rm u}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\overrightarrow{\rm u} \bullet (\overrightarrow{\rm v} + \overrightarrow{\rm w}) = \overrightarrow{\rm u} \bullet \overrightarrow{\rm v} + \overrightarrow{\rm u} \bullet \overrightarrow{\rm w}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\overrightarrow{\rm 0} \bullet \overrightarrow{\rm v} = 0\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\overrightarrow{\rm u} \bullet \overrightarrow{\rm u} = (\|\overrightarrow{\rm u}\|)^2\)</span></p></li>
+</ul>
+</section>
+</section>
+<section id="angulo-entre-vectores">
+<h2><span class="section-number">9.5. </span>Ángulo entre Vectores<a class="headerlink" href="#angulo-entre-vectores" title="Permalink to this heading">#</a></h2>
+<div class="math notranslate nohighlight">
+\[\large \cos{\alpha} = \frac{\overrightarrow{\rm u} \cdot \overrightarrow{\rm v}}{\overrightarrow{\rm \|u\|} \cdot \overrightarrow{\rm \|v\|}}\]</div>
+</section>
+<section id="producto-cruz">
+<h2><span class="section-number">9.6. </span>Producto Cruz<a class="headerlink" href="#producto-cruz" title="Permalink to this heading">#</a></h2>
+<p>Sean <span class="math notranslate nohighlight">\(\overrightarrow{\rm u} = \rm(u_1, u_2, u_3), \overrightarrow{\rm v} = (v_1, v_2, v_3) \in \mathbb{R}^3\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[\boxed{\overrightarrow{\rm u} \times \overrightarrow{\rm v} = \rm(u_2 \cdot v_3 - v_2 \cdot u_3, v_1 \cdot u_2 - u_1 \cdot v_3, u_1 \cdot v_2 - v_1 \cdot u_2)}\]</div>
+<section id="id1">
+<h3><span class="section-number">9.6.1. </span>Propiedades<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>
+<p>Sean <span class="math notranslate nohighlight">\(\overrightarrow{\rm u}\)</span>, <span class="math notranslate nohighlight">\(\overrightarrow{\rm v}\)</span>, <span class="math notranslate nohighlight">\(\overrightarrow{\rm w}\)</span> <span class="math notranslate nohighlight">\(\in \mathbb{R}^3\)</span>, <span class="math notranslate nohighlight">\(k \in \mathbb{R}\)</span>, se cumplen las siguientes propiedades.</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\overrightarrow{\rm u} \times \overrightarrow{\rm w} = -\overrightarrow{\rm w} \times \overrightarrow{\rm u}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\overrightarrow{\rm u} \bullet (\overrightarrow{\rm u} \times \overrightarrow{\rm w}) = \overrightarrow{\rm w} \bullet (\overrightarrow{\rm u} \times \overrightarrow{\rm w})\)</span></p></li>
+<li><p>“Regla de la mano derecha”</p></li>
+<li><p><span class="math notranslate nohighlight">\(\overrightarrow{\rm u} \times \overrightarrow{\rm u} = \overrightarrow{\rm u} \times \overrightarrow{\rm 0} = \overrightarrow{\rm 0}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\((k \cdot \overrightarrow{\rm u}) \times \overrightarrow{\rm v} = \overrightarrow{\rm u} \times (k \cdot \overrightarrow{\rm v}) = k (\)</span></p></li>
+</ul>
+</section>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="resumen-de-geometria-vectorial">
+<h1><span class="section-number">10. </span>Resumen de Geometría Vectorial<a class="headerlink" href="#resumen-de-geometria-vectorial" title="Permalink to this heading">#</a></h1>
+<section id="definiciones-basicas">
+<h2><span class="section-number">10.1. </span>Definiciones Básicas<a class="headerlink" href="#definiciones-basicas" title="Permalink to this heading">#</a></h2>
+<section id="vector">
+<h3><span class="section-number">10.1.1. </span>Vector<a class="headerlink" href="#vector" title="Permalink to this heading">#</a></h3>
+<p>Un <strong>vector</strong> es una cantidad que tiene tanto magnitud como dirección. En el plano o en el espacio, un vector se puede representar como un segmento dirigido.</p>
+<ul class="simple">
+<li><p><strong>Notación</strong>: Un vector en <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span> se denota típicamente como <span class="math notranslate nohighlight">\(\vec{v}\)</span> o <span class="math notranslate nohighlight">\(\mathbf{v}\)</span>.</p></li>
+<li><p><strong>Componentes</strong>: En <span class="math notranslate nohighlight">\(\mathbb{R}^2\)</span>, un vector <span class="math notranslate nohighlight">\(\vec{v}\)</span> se puede escribir como <span class="math notranslate nohighlight">\(\vec{v} = \langle v_1, v_2 \rangle\)</span>. En <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span>, se escribe como <span class="math notranslate nohighlight">\(\vec{v} = \langle v_1, v_2, v_3 \rangle\)</span>.</p></li>
+</ul>
+</section>
+<section id="magnitud-de-un-vector">
+<h3><span class="section-number">10.1.2. </span>Magnitud de un Vector<a class="headerlink" href="#magnitud-de-un-vector" title="Permalink to this heading">#</a></h3>
+<p>La <strong>magnitud</strong> o <strong>norma</strong> de un vector <span class="math notranslate nohighlight">\(\vec{v} = \langle v_1, v_2 \rangle\)</span> en <span class="math notranslate nohighlight">\(\mathbb{R}^2\)</span> se define como:</p>
+<p><span class="math notranslate nohighlight">\( |\vec{v}| = \sqrt{v_1^2 + v_2^2} \)</span></p>
+<p>Para un vector <span class="math notranslate nohighlight">\(\vec{v} = \langle v_1, v_2, v_3 \rangle\)</span> en <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span>:</p>
+<p><span class="math notranslate nohighlight">\( |\vec{v}| = \sqrt{v_1^2 + v_2^2 + v_3^2} \)</span></p>
+</section>
+<section id="id2">
+<h3><span class="section-number">10.1.3. </span>Suma de Vectores<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h3>
+<p>La <strong>suma</strong> de dos vectores <span class="math notranslate nohighlight">\(\vec{u} = \langle u_1, u_2 \rangle\)</span> y <span class="math notranslate nohighlight">\(\vec{v} = \langle v_1, v_2 \rangle\)</span> en <span class="math notranslate nohighlight">\(\mathbb{R}^2\)</span> se define como:</p>
+<p><span class="math notranslate nohighlight">\( \vec{u} + \vec{v} = \langle u_1 + v_1, u_2 + v_2 \rangle \)</span></p>
+</section>
+<section id="producto-por-un-escalar">
+<h3><span class="section-number">10.1.4. </span>Producto por un Escalar<a class="headerlink" href="#producto-por-un-escalar" title="Permalink to this heading">#</a></h3>
+<p>El <strong>producto</strong> de un vector <span class="math notranslate nohighlight">\(\vec{v} = \langle v_1, v_2 \rangle\)</span> por un escalar (c) es:</p>
+<p><span class="math notranslate nohighlight">\( c\vec{v} = \langle cv_1, cv_2 \rangle \)</span></p>
+</section>
+</section>
+<section id="propiedades-de-los-vectores">
+<h2><span class="section-number">10.2. </span>Propiedades de los Vectores<a class="headerlink" href="#propiedades-de-los-vectores" title="Permalink to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p><strong>Conmutativa de la Suma</strong>:
+<span class="math notranslate nohighlight">\( \vec{u} + \vec{v} = \vec{v} + \vec{u} \)</span></p></li>
+<li><p><strong>Asociativa de la Suma</strong>:
+<span class="math notranslate nohighlight">\( (\vec{u} + \vec{v}) + \vec{w} = \vec{u} + (\vec{v} + \vec{w}) \)</span></p></li>
+<li><p><strong>Elemento Neutro</strong>:
+<span class="math notranslate nohighlight">\( \vec{v} + \vec{0} = \vec{v} \)</span></p></li>
+<li><p><strong>Elemento Inverso</strong>:
+<span class="math notranslate nohighlight">\( \vec{v} + (-\vec{v}) = \vec{0} \)</span></p></li>
+<li><p><strong>Distribución del Producto Escalar sobre la Suma de Vectores</strong>:
+<span class="math notranslate nohighlight">\( c(\vec{u} + \vec{v}) = c\vec{u} + c\vec{v} \)</span></p></li>
+<li><p><strong>Distribución del Producto Escalar sobre la Suma de Escalares</strong>:
+<span class="math notranslate nohighlight">\( (c + d)\vec{v} = c\vec{v} + d\vec{v} \)</span></p></li>
+<li><p><strong>Asociativa del Producto Escalar</strong>:
+<span class="math notranslate nohighlight">\( c(d\vec{v}) = (cd)\vec{v} \)</span></p></li>
+</ol>
+</section>
+<section id="producto-escalar">
+<h2><span class="section-number">10.3. </span>Producto Escalar<a class="headerlink" href="#producto-escalar" title="Permalink to this heading">#</a></h2>
+<p>El <strong>producto escalar</strong> (o producto punto) de dos vectores <span class="math notranslate nohighlight">\(\vec{u} = \langle u_1, u_2 \rangle\)</span> y <span class="math notranslate nohighlight">\(\vec{v} = \langle v_1, v_2 \rangle\)</span> en <span class="math notranslate nohighlight">\(\mathbb{R}^2\)</span> es:</p>
+<p><span class="math notranslate nohighlight">\( \vec{u} \cdot \vec{v} = u_1v_1 + u_2v_2 \)</span></p>
+<p>En <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span>, para <span class="math notranslate nohighlight">\(\vec{u} = \langle u_1, u_2, u_3 \rangle\)</span> y <span class="math notranslate nohighlight">\(\vec{v} = \langle v_1, v_2, v_3 \rangle\)</span>:</p>
+<p><span class="math notranslate nohighlight">\( \vec{u} \cdot \vec{v} = u_1v_1 + u_2v_2 + u_3v_3 \)</span></p>
+<p>El producto escalar tiene las siguientes propiedades:</p>
+<ol class="arabic simple">
+<li><p><strong>Conmutativa</strong>:
+<span class="math notranslate nohighlight">\( \vec{u} \cdot \vec{v} = \vec{v} \cdot \vec{u} \)</span></p></li>
+<li><p><strong>Distribución</strong>:
+<span class="math notranslate nohighlight">\( \vec{u} \cdot (\vec{v} + \vec{w}) = \vec{u} \cdot \vec{v} + \vec{u} \cdot \vec{w} \)</span></p></li>
+<li><p><strong>Asociativa con el Producto por un Escalar</strong>:
+<span class="math notranslate nohighlight">\( (c\vec{u}) \cdot \vec{v} = c(\vec{u} \cdot \vec{v}) \)</span></p></li>
+<li><p><strong>Producto Escalar de un Vector Consigo Mismo</strong>:
+<span class="math notranslate nohighlight">\( \vec{v} \cdot \vec{v} = |\vec{v}|^2 \)</span></p></li>
+</ol>
+</section>
+<section id="producto-vectorial">
+<h2><span class="section-number">10.4. </span>Producto Vectorial<a class="headerlink" href="#producto-vectorial" title="Permalink to this heading">#</a></h2>
+<p>El <strong>producto vectorial</strong> de dos vectores <span class="math notranslate nohighlight">\(\vec{u} = \langle u_1, u_2, u_3 \rangle\)</span> y <span class="math notranslate nohighlight">\(\vec{v} = \langle v_1, v_2, v_3 \rangle\)</span> en <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span> es un vector definido como:</p>
+<p><span class="math notranslate nohighlight">\( \vec{u} \times \vec{v} = \langle (u_2 v_3 - u_3 v_2), (u_3 v_1 - u_1 v_3), (u_1v_2 - u_2v_1) \rangle \)</span></p>
+<p>El producto vectorial tiene las siguientes propiedades:</p>
+<ol class="arabic simple">
+<li><p><strong>Anticonmutativa</strong>:
+<span class="math notranslate nohighlight">\( \vec{u} \times \vec{v} = -(\vec{v} \times \vec{u}) \)</span></p></li>
+<li><p><strong>Distribución</strong>:
+<span class="math notranslate nohighlight">\( \vec{u} \times (\vec{v} + \vec{w}) = \vec{u} \times \vec{v} + \vec{u} \times \vec{w} \)</span></p></li>
+<li><p><strong>Asociativa con el Producto por un Escalar</strong>:
+<span class="math notranslate nohighlight">\( (c\vec{u}) \times \vec{v} = c(\vec{u} \times \vec{v}) \)</span></p></li>
+</ol>
+</section>
+<section id="ejemplos">
+<h2><span class="section-number">10.5. </span>Ejemplos<a class="headerlink" href="#ejemplos" title="Permalink to this heading">#</a></h2>
+<section id="ejemplo-de-suma-de-vectores">
+<h3><span class="section-number">10.5.1. </span>Ejemplo de Suma de Vectores<a class="headerlink" href="#ejemplo-de-suma-de-vectores" title="Permalink to this heading">#</a></h3>
+<p>Dados los vectores <span class="math notranslate nohighlight">\(\vec{u} = \langle 1, 3 \rangle\)</span> y <span class="math notranslate nohighlight">\(\vec{v} = \langle 4, -2 \rangle\)</span>:</p>
+<p><span class="math notranslate nohighlight">\( \vec{u} + \vec{v} = \langle 1 + 4, 3 - 2 \rangle = \langle 5, 1 \rangle \)</span></p>
+</section>
+<section id="ejemplo-de-producto-escalar">
+<h3><span class="section-number">10.5.2. </span>Ejemplo de Producto Escalar<a class="headerlink" href="#ejemplo-de-producto-escalar" title="Permalink to this heading">#</a></h3>
+<p>Dados los vectores <span class="math notranslate nohighlight">\(\vec{u} = \langle 1, 2, 3 \rangle\)</span> y <span class="math notranslate nohighlight">\(\vec{v} = \langle 4, -5, 6 \rangle\)</span>:</p>
+<p><span class="math notranslate nohighlight">\( \vec{u} \cdot \vec{v} = (1)(4) + (2)(-5) + (3)(6) = 4 - 10 + 18 = 12 \)</span></p>
+</section>
+<section id="ejemplo-de-producto-vectorial">
+<h3><span class="section-number">10.5.3. </span>Ejemplo de Producto Vectorial<a class="headerlink" href="#ejemplo-de-producto-vectorial" title="Permalink to this heading">#</a></h3>
+<p>Dados los vectores (\vec{u} = \langle 1, 2, 3 \rangle) y (\vec{v} = \langle 4, -5, 6 \rangle):</p>
+<p><span class="math notranslate nohighlight">\( \vec{u} \times \vec{v} = \langle (2)(6) - (3)(-5), (3)(4) - (1)(6), (1)(-5) - (2)(4) \rangle = \langle 12 + 15, 12 - 6, -5 - 8 \rangle = \langle 27, 6, -13 \rangle \)</span></p>
+<!-- Geogebra Iframe (3D Calculator) -->
+</section>
+</section>
+<section id="geogebra">
+<h2><span class="section-number">10.6. </span>GeoGebra<a class="headerlink" href="#geogebra" title="Permalink to this heading">#</a></h2>
+<p>Calculadora 3D.</p>
+<iframe height="600" width="100%" style="border: 2px solid gray; padding: 1%; border-radius: 1em;" scrolling="no" title="3D Calculator" src="https://www.geogebra.org/3d/shxt4egn" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true"></iframe>
+<blockquote>
+<div><p>Recurso: <a class="reference external" href="https://www.geogebra.org/3d/shxt4egn">https://www.geogebra.org/3d/shxt4egn</a></p>
+</div></blockquote>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./books/BAIN067-24"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="2-BAIN067-24.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">8. </span>Geometría Analítica</p>
+      </div>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">9. Geometría Vectorial</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operatoria-en-mathbb-r-n">9.1. Operatoria en <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#igualdad-de-vectores">9.1.1. Igualdad de Vectores</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#suma-de-vectores">9.1.2. Suma de Vectores</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#multiplicacion-por-escalar">9.1.3. Multiplicación por Escalar</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#norma-o-modulo">9.2. Norma o Módulo</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vectores-unitarios">9.3. Vectores Unitarios</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#producto-punto">9.4. Producto Punto</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#propiedades">9.4.1. Propiedades</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#angulo-entre-vectores">9.5. Ángulo entre Vectores</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#producto-cruz">9.6. Producto Cruz</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">9.6.1. Propiedades</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#resumen-de-geometria-vectorial">10. Resumen de Geometría Vectorial</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definiciones-basicas">10.1. Definiciones Básicas</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vector">10.1.1. Vector</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#magnitud-de-un-vector">10.1.2. Magnitud de un Vector</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">10.1.3. Suma de Vectores</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#producto-por-un-escalar">10.1.4. Producto por un Escalar</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#propiedades-de-los-vectores">10.2. Propiedades de los Vectores</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#producto-escalar">10.3. Producto Escalar</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#producto-vectorial">10.4. Producto Vectorial</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ejemplos">10.5. Ejemplos</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ejemplo-de-suma-de-vectores">10.5.1. Ejemplo de Suma de Vectores</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ejemplo-de-producto-escalar">10.5.2. Ejemplo de Producto Escalar</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ejemplo-de-producto-vectorial">10.5.3. Ejemplo de Producto Vectorial</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#geogebra">10.6. GeoGebra</a></li>
+</ul>
+</li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Areté Poffart
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

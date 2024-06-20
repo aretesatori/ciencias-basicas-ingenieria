@@ -1,44 +1,51 @@
-# My Notebook
+# Ciencias Básicas para Ingeniería
 
-Este es un repositorio con apuntes de contenidos de Ciencias Básicas, del plan de Bachillerato en Ciencias de la Ingeniería. UACh 2024.  
+Este libro digital tiene como objetivo reunir de forma resumida, simplificada e interactiva, los contenidos de **ciencias básicas** correspondientes al plan de [Bachillerato en Ciencias de la Ingeniería](https://www.uach.cl/dw/admision/plandeestudio.php?car=1807) (Plan Común). 
+
+Este proyecto está en constante desarrollo. El código fuente se encuentra en: https://github.com/aretesatori/ciencias-basicas-ingenieria.
+
+Los contenidos que se encuentran a continuación están basados específicamente en los programas de las asignaturas de plan común (vigentes al año 2024), impartidas a las carreras de ingeniería por la [Universidad Austral de Chile](https://ingenieria.uach.cl/).
+
 Link: https://aretesatori.github.io/ciencias-basicas-ingenieria/
 
+---
 # Asignaturas:
 
-## BAIN065-24 | Álgebra para Ingeniería
+## Álgebra para Ingeniería
 
-> ### Unidades
+> ### Contenido (BAIN065-24)
 
-> 1. [Números Reales y Lenguaje Algebraico](https://aretesatori.github.io/ciencias-basicas-ingenieria/books/BAIN065-24/1_BAIN065-24.html)
-> 2. [Ecuaciones Algebraicas](https://aretesatori.github.io/ciencias-basicas-ingenieria/books/BAIN065-24/2_BAIN065-24.html)
-> 3. [Polinomios con Coeficientes Reales](https://aretesatori.github.io/ciencias-basicas-ingenieria/books/BAIN065-24/3_BAIN065-24.html)
+> 1. [Números Reales y Lenguaje Algebraico](https://aretesatori.github.io/ciencias-basicas-ingenieria/books/BAIN065-24/1-BAIN065-24.html)
+> 2. [Ecuaciones Algebraicas](https://aretesatori.github.io/ciencias-basicas-ingenieria/books/BAIN065-24/2-BAIN065-24.html)
+> 3. [Polinomios con Coeficientes Reales](https://aretesatori.github.io/ciencias-basicas-ingenieria/books/BAIN065-24/3-BAIN065-24.html)
 > 4. Lógica y Conjuntos
 > 5. Orden en los Números Reales
 > 6. Funciones Reales
 > 7. Límites y Continuidad
 
-## BAIN067-24 | Geometría para Ingeniería
+## Geometría para Ingeniería
 
-> ### Unidades
+> ### Contenido (BAIN067-24)
 
-> 1. [Geometría Plana](#)
+> 1. Geometría Plana
 > 2. Geometría Analítica
 > 3. Geometría Vectorial
 > 4. Funciones Trigonométricas, Coordenadas Polares y Números Complejos
 
-## BAIN069-14 | Química para Ingeniería
+## Química para Ingeniería
 
-> ### Unidades
+> ### Contenido (BAIN069-14)
 
-- **\[En desarrollo\]**
+- **\[No disponible\]**
 
 ---
 # Contacto
 
-> * Consultas y sugerencias a mi correo electrónico:  
-> [arete.poffart@alumnos.uach.cl](mailto:arete.poffart@alumnos.uach.cl) $\vee$ [aretesatori@gmail.com](mailto:aretesatori@gmail.com)
+Cualquier sugerencia, contribución y/o comentario es bienvenido. 
+* Correo electrónico: [arete.poffart@alumnos.uach.cl](mailto:arete.poffart@alumnos.uach.cl)
  
 ---
 # Agradecimiento
-> $\bigstar$ Un agradecimiento especial al profesor Pablo Huijse por desarrollar y disponibilizar la plantilla de construcción de libros interactivos en Jupyter Notebook.  
-> $\bigstar$ Repositorio del proyecto: https://github.com/phuijse/JupyterBookUACh  
+> * Un agradecimiento especial al profesor Pablo Huijse por desarrollar y disponibilizar la plantilla de construcción de libros interactivos en Jupyter Notebook.  
+>
+> * Repositorio del proyecto: https://github.com/phuijse/JupyterBookUACh  

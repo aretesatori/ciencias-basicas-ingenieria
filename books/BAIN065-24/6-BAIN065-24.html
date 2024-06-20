@@ -1,0 +1,811 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>6. Funciones de Variable Real &#8212; Ciencias Básicas Ingeniería</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/pydata-sphinx-theme.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'books/BAIN065-24/6-BAIN065-24';</script>
+    <link rel="shortcut icon" href="https://github.githubassets.com/favicons/favicon-dark.svg"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="7. Geometría Plana" href="../BAIN067-24/1-BAIN067-24.html" />
+    <link rel="prev" title="5. Orden en los Números Reales" href="5-BAIN065-24.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/logo-uach-light.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../../_static/logo-uach-light.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../index.html">
+                    Inicio
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Álgebra para Ingeniería</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="1-BAIN065-24.html">1. Números Reales y Lenguaje Algebraico</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2-BAIN065-24.html">2. Ecuaciones Algebraicas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3-BAIN065-24.html">3. Polinomios con Coeficientes Reales</a></li>
+<li class="toctree-l1"><a class="reference internal" href="4-BAIN065-24.html">4. Lógica y Conjuntos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="5-BAIN065-24.html">5. Orden en los Números Reales</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">6. Funciones de Variable Real</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Geometría para Ingeniería</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../BAIN067-24/1-BAIN067-24.html">7. Geometría Plana</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../python-tests.html">7.7. Tabla Trigonométrica de Ángulos</a></li>
+
+
+
+
+
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../BAIN067-24/2-BAIN067-24.html">8. Geometría Analítica</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../BAIN067-24/3-BAIN067-24.html">9. Geometría Vectorial</a></li>
+
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/books/BAIN065-24/6-BAIN065-24.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Funciones de Variable Real</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definicion-de-funcion">6.1. Definición de Función</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#diagrama-sagital">6.1.1. Diagrama Sagital</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#elementos-de-una-funcion">6.2. Elementos de una Función</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dominio-de-una-funcion">6.3. Dominio de una Función</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#recorrido-de-una-funcion">6.4. Recorrido de una Función</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#algebra-de-funciones">6.5. Álgebra de Funciones</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#composicion-de-funciones">6.6. Composición de Funciones</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tipos-de-funciones">6.7. Tipos de Funciones</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#inyectividad">6.8. Inyectividad</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sobreyectividad">6.9. Sobreyectividad</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#funcion-inversa">6.10. Función Inversa</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#geogebra">6.11. GeoGebra</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#grafico-de-funciones-conocidas">6.12. Gráfico de Funciones Conocidas</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#funcion-constante">6.12.1. Función Constante</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#funcion-identidad">6.12.2. Función Identidad</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#funcion-valor-absoluto">6.12.3. Función Valor Absoluto</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#funcion-cuadratica">6.12.4. Función Cuadrática</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#funcion-cubica">6.12.5. Función Cúbica</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#funcion-radical">6.12.6. Función Radical</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#funcion-racional">6.12.7. Función Racional</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#funcion-seno">6.12.8. Función Seno</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#funcion-exponencial">6.12.9. Función Exponencial</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#funcion-logaritmica">6.12.10. Función Logarítmica</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="funciones-de-variable-real">
+<h1><span class="section-number">6. </span>Funciones de Variable Real<a class="headerlink" href="#funciones-de-variable-real" title="Permalink to this heading">#</a></h1>
+<section id="definicion-de-funcion">
+<h2><span class="section-number">6.1. </span>Definición de Función<a class="headerlink" href="#definicion-de-funcion" title="Permalink to this heading">#</a></h2>
+<p>Sean <span class="math notranslate nohighlight">\(A\)</span> y <span class="math notranslate nohighlight">\(B\)</span> dos conjuntos no vacíos. Una función de <span class="math notranslate nohighlight">\(A\)</span> en <span class="math notranslate nohighlight">\(B\)</span> es una correspondencia tal que a cada elemento de <span class="math notranslate nohighlight">\(A\)</span> le corresponde un único elemento de <span class="math notranslate nohighlight">\(B\)</span>.</p>
+<p>Viene dado por la siguiente definición:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{array}{cl}
+    f : &amp; A &amp; \longrightarrow &amp; B &amp; \\
+        &amp; x &amp; \longmapsto &amp; y = f(x) &amp;
+\end{array}\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[(\forall x \in A)(\exists! y \in B)(f(x) = y)\]</div>
+<!-- 
+>$f : \quad A \rightarrow B$
+>
+>$(\forall a \in A)(\exists! b \in B)$ ($f(a) = b$) -->
+<p>Para las funciones de variable real, <span class="math notranslate nohighlight">\(A\)</span> y <span class="math notranslate nohighlight">\(B\)</span> son subconjuntos de <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> y tienen la siguiente definición:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align}
+    f : \quad A  \subseteq\mathbb{R}&amp;\; \longrightarrow B \subseteq\mathbb{R} \\
+        x &amp;\; \longmapsto y = f(x)
+\end{align}\end{split}\]</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>Notación:</strong></p>
+<p><span class="math notranslate nohighlight">\(\begin{array}{rcl}
+  &amp;\; \forall  &amp;\; \text{: Para todo.} \\ \\
+  &amp;\; \exists! &amp;\; \text{: Existe un único.} \\ \\
+  &amp;\; A \subseteq B &amp;\; \text{: A subconjunto de B.}
+\end{array}\)</span></p>
+<!-- * $\forall$: _Para todo._
+
+* $\exists!$: $\quad$_Existe un único._
+
+* $A \subseteq B$: $\quad$_A Subconjunto de B._ -->
+</div>
+<section id="diagrama-sagital">
+<h3><span class="section-number">6.1.1. </span>Diagrama Sagital<a class="headerlink" href="#diagrama-sagital" title="Permalink to this heading">#</a></h3>
+<iframe scrolling="no" title="Correspondencia de Funciones" src="https://www.geogebra.org/material/iframe/id/acrkjzme/width/750/height/580/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" width="49%" height="300" style="border: 0px;"></iframe>
+<iframe scrolling="no" title="Correspondencia de Funciones" src="https://www.geogebra.org/material/iframe/id/bedgnh6z/width/750/height/580/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" width="49%" height="300" style="border: 0px;"></iframe>
+<blockquote>
+<div><p>Recurso 1: <a class="reference external" href="https://www.geogebra.org/graphing/acrkjzme">https://www.geogebra.org/graphing/acrkjzme</a><br />
+Recurso 2: <a class="reference external" href="https://www.geogebra.org/graphing/bedgnh6z">https://www.geogebra.org/graphing/bedgnh6z</a></p>
+</div></blockquote>
+<p>En el primer diagrama, <em>cada elemento de <span class="math notranslate nohighlight">\(A\)</span> tiene una correspondencia con un único elemento de <span class="math notranslate nohighlight">\(B\)</span></em>, lo que cumple con la definición de función.</p>
+<p>En el caso del segundo diagrama, existe un elemento del conjunto <span class="math notranslate nohighlight">\(A\)</span> que tiene una correspondencia con más de un elemento del conjunto <span class="math notranslate nohighlight">\(B\)</span>, lo que no cumple con la definición de función.</p>
+</section>
+</section>
+<section id="elementos-de-una-funcion">
+<h2><span class="section-number">6.2. </span>Elementos de una Función<a class="headerlink" href="#elementos-de-una-funcion" title="Permalink to this heading">#</a></h2>
+<!-- $$
+a + b + c = \underbrace{(a + b) + c}_{\text{Anotación horizontal inferior}}
+$$
+
+
+$$
+a + b + c = \overbrace{a + (b + c)}^{\text{Anotación horizontal superior}}
+$$ -->
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{array}{rcc}
+    f : &amp;\; \overbrace{A}^{\text{Dominio}} \longrightarrow &amp;\; \overbrace{B}^{\text{Codominio}} &amp;\;\\
+       &amp;\; \underbrace{x}_{\text{Preimagen}} \longmapsto &amp;\; \underbrace{y = f(x)}_{\text{Regla de Correspondencia}} &amp;\;
+\end{array}\end{split}\]</div>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(A\)</span> se llama <strong>Dominio</strong> de la función o <strong>Conjunto de Partida</strong>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(B\)</span> se llama <strong>Codominio</strong> de la función o <strong>Conjunto de Llegada</strong>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(y = f(x)\)</span> se llama <strong>Regla de Correspondencia</strong>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(x\)</span> se llama <strong>Preimagen</strong> o <strong>Variable Independiente</strong>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(y\)</span> se llama <strong>Imagen</strong> o <strong>Variable Dependiente</strong>.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">HTML</span>
+
+<span class="n">HTML</span><span class="p">(</span><span class="s1">&#39;&lt;iframe scrolling=&quot;no&quot; title=&quot;Correspondencia de Funciones&quot; src=&quot;https://www.geogebra.org/material/iframe/id/ykuydbak/width/830/height/580/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false&quot; width=&quot;100%&quot; height=&quot;600&quot; style=&quot;border: 0px; border: 3px solid gray; /*Border only for debug*/ &quot;&gt;&lt;/iframe&gt;&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/opt/miniconda3/envs/jupyter-book-demo/lib/python3.7/site-packages/IPython/core/display.py:724: UserWarning: Consider using IPython.display.IFrame instead
+  warnings.warn(&quot;Consider using IPython.display.IFrame instead&quot;)
+</pre></div>
+</div>
+<div class="output text_html"><iframe scrolling="no" title="Correspondencia de Funciones" src="https://www.geogebra.org/material/iframe/id/ykuydbak/width/830/height/580/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" width="100%" height="600" style="border: 0px; border: 3px solid gray; /*Border only for debug*/ "></iframe></div></div>
+</div>
+</section>
+<section id="dominio-de-una-funcion">
+<h2><span class="section-number">6.3. </span>Dominio de una Función<a class="headerlink" href="#dominio-de-una-funcion" title="Permalink to this heading">#</a></h2>
+<p>Sea <span class="math notranslate nohighlight">\(\quad\boxed{\begin{align}
+    f : \quad A  \subseteq\mathbb{R}&amp;\; \longrightarrow B \subseteq\mathbb{R} \\
+        x &amp;\; \longmapsto y = f(x)
+\end{align}}\quad\)</span> una función, el Dominio de <span class="math notranslate nohighlight">\(f\)</span> denotado por <span class="math notranslate nohighlight">\(Dom(f)\)</span> se define como:</p>
+<div class="math notranslate nohighlight">
+\[\boxed{Dom(f) = \{x \in\mathbb{R} : f(x) \in\mathbb{R}\}}\]</div>
+</section>
+<section id="recorrido-de-una-funcion">
+<h2><span class="section-number">6.4. </span>Recorrido de una Función<a class="headerlink" href="#recorrido-de-una-funcion" title="Permalink to this heading">#</a></h2>
+<p>Sea <span class="math notranslate nohighlight">\(\quad\boxed{\begin{align}
+    f : \quad &amp;\; A \longrightarrow B \\
+       &amp;\; x \longmapsto y = f(x)
+\end{align}}\quad\)</span> una función, el Recorrido de <span class="math notranslate nohighlight">\(f\)</span> denotado por <span class="math notranslate nohighlight">\(Rec(f)\)</span> se define como:</p>
+<div class="math notranslate nohighlight">
+\[\boxed{Rec(f) = \{y \in\mathbb{R} : (\exists x \in Dom(f))(y = f(x))\}}\]</div>
+</section>
+<section id="algebra-de-funciones">
+<h2><span class="section-number">6.5. </span>Álgebra de Funciones<a class="headerlink" href="#algebra-de-funciones" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="composicion-de-funciones">
+<h2><span class="section-number">6.6. </span>Composición de Funciones<a class="headerlink" href="#composicion-de-funciones" title="Permalink to this heading">#</a></h2>
+<p><span class="math notranslate nohighlight">\((g \circ f)(x) = g\left( f(x) \right)\)</span></p>
+<p><span class="math notranslate nohighlight">\(Dom(g \circ f) = \{x \in Dom(f) : f(x) \in Dom(g)\}\)</span></p>
+</section>
+<section id="tipos-de-funciones">
+<h2><span class="section-number">6.7. </span>Tipos de Funciones<a class="headerlink" href="#tipos-de-funciones" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="inyectividad">
+<h2><span class="section-number">6.8. </span>Inyectividad<a class="headerlink" href="#inyectividad" title="Permalink to this heading">#</a></h2>
+<p>Sea <span class="math notranslate nohighlight">\(\quad\boxed{\begin{align}
+    f : \quad &amp;\; A \longrightarrow \mathbb{R} \\
+       &amp;\; x \longmapsto y = f(x)
+\end{align}}\quad\)</span> una función. Diremos que <span class="math notranslate nohighlight">\(f\)</span> es <strong>inyectiva</strong>, si y solo si:</p>
+<div class="math notranslate nohighlight">
+\[\forall a, b \in A = Dom(f)\]</div>
+<div class="math notranslate nohighlight">
+\[f(a) = f(b) \Rightarrow a = b\]</div>
+</section>
+<section id="sobreyectividad">
+<h2><span class="section-number">6.9. </span>Sobreyectividad<a class="headerlink" href="#sobreyectividad" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="funcion-inversa">
+<h2><span class="section-number">6.10. </span>Función Inversa<a class="headerlink" href="#funcion-inversa" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="geogebra">
+<h2><span class="section-number">6.11. </span>GeoGebra<a class="headerlink" href="#geogebra" title="Permalink to this heading">#</a></h2>
+<p>Calculadora gráfica interactiva.</p>
+<iframe height="700" width="100%" style="border: 2px solid gray; padding: 1%; border-radius: 1em;" scrolling="no" title="GeoGebra" src="https://www.geogebra.org/graphing" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true"></iframe>
+<blockquote>
+<div><p>Recurso: <a class="reference external" href="https://www.geogebra.org/graphing">https://www.geogebra.org/graphing</a></p>
+</div></blockquote>
+</section>
+<section id="grafico-de-funciones-conocidas">
+<h2><span class="section-number">6.12. </span>Gráfico de Funciones Conocidas<a class="headerlink" href="#grafico-de-funciones-conocidas" title="Permalink to this heading">#</a></h2>
+<section id="funcion-constante">
+<h3><span class="section-number">6.12.1. </span>Función Constante<a class="headerlink" href="#funcion-constante" title="Permalink to this heading">#</a></h3>
+<p>Es una función que siempre toma la misma imagen para cualquier valor de x. Tiene la forma <span class="math notranslate nohighlight">\(\boxed{f(x) = k}\)</span> o también <span class="math notranslate nohighlight">\(\boxed{y = k}\)</span>, donde <span class="math notranslate nohighlight">\(k\)</span> es un número real cualquiera.</p>
+<p><span class="math notranslate nohighlight">\(\large \boxed{f(x) = k} \small\quad\quad (k \in \mathbb{R})\)</span></p>
+<ul class="simple">
+<li><p>El dominio de la función constante es el conjunto de los números reales:</p></li>
+</ul>
+<blockquote>
+<div><p><span class="math notranslate nohighlight">\(Dom(f) = \mathbb{R}\)</span></p>
+</div></blockquote>
+<ul class="simple">
+<li><p>El recorrido de la función constante es el valor de la constante:</p></li>
+</ul>
+<blockquote>
+<div><p><span class="math notranslate nohighlight">\(Rec(f) = k\)</span></p>
+</div></blockquote>
+<ul class="simple">
+<li><p>Ejemplo:</p></li>
+</ul>
+<blockquote>
+<div><p><span class="math notranslate nohighlight">\(f(x) = 1\)</span></p>
+</div></blockquote>
+<iframe height="500" style="width: 100%;" scrolling="no" title="Función Constante" src="https://www.geogebra.org/material/iframe/id/n2r2mp9w/width/1000/height/600/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true"></iframe>
+<blockquote>
+<div><p>Recurso: <a class="reference external" href="https://www.geogebra.org/graphing/n2r2mp9w">https://www.geogebra.org/graphing/n2r2mp9w</a></p>
+</div></blockquote>
+</section>
+<section id="funcion-identidad">
+<h3><span class="section-number">6.12.2. </span>Función Identidad<a class="headerlink" href="#funcion-identidad" title="Permalink to this heading">#</a></h3>
+<p><span class="math notranslate nohighlight">\(\large \boxed{f(x) = x}\)</span></p>
+<blockquote>
+<div><p><span class="math notranslate nohighlight">\(Dom(f) = \mathbb{R}\)</span></p>
+</div></blockquote>
+<blockquote>
+<div><p><span class="math notranslate nohighlight">\(Rec(f) = \mathbb{R}\)</span></p>
+</div></blockquote>
+<iframe height="500" style="width: 100%;" scrolling="no" title="Función Identidad" src="https://www.geogebra.org/material/iframe/id/d9t8qsve/width/1000/height/600/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true"></iframe>
+<blockquote>
+<div><p>Recurso: <a class="reference external" href="https://www.geogebra.org/graphing/d9t8qsve">https://www.geogebra.org/graphing/d9t8qsve</a></p>
+</div></blockquote>
+</section>
+<section id="funcion-valor-absoluto">
+<h3><span class="section-number">6.12.3. </span>Función Valor Absoluto<a class="headerlink" href="#funcion-valor-absoluto" title="Permalink to this heading">#</a></h3>
+<p><span class="math notranslate nohighlight">\(\large \boxed{f(x) = |x|}\)</span></p>
+<blockquote>
+<div><p><span class="math notranslate nohighlight">\(Dom(f) = \mathbb{R}\)</span></p>
+</div></blockquote>
+<blockquote>
+<div><p><span class="math notranslate nohighlight">\(Rec(f) = [0, +\infty[ \quad=\quad \mathbb{R_0}^+\)</span></p>
+</div></blockquote>
+<iframe height="500" style="width: 100%;" scrolling="no" title="Función Valor Absoluto" src="https://www.geogebra.org/material/iframe/id/j3gss6gj/width/1000/height/600/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true"></iframe>
+<blockquote>
+<div><p>Recurso: <a class="reference external" href="https://www.geogebra.org/graphing/j3gss6gj">https://www.geogebra.org/graphing/j3gss6gj</a></p>
+</div></blockquote>
+</section>
+<section id="funcion-cuadratica">
+<h3><span class="section-number">6.12.4. </span>Función Cuadrática<a class="headerlink" href="#funcion-cuadratica" title="Permalink to this heading">#</a></h3>
+<p><span class="math notranslate nohighlight">\(\large \boxed{f(x) = x^2}\)</span></p>
+<blockquote>
+<div><p><span class="math notranslate nohighlight">\(Dom(f) = \mathbb{R}\)</span></p>
+</div></blockquote>
+<blockquote>
+<div><p><span class="math notranslate nohighlight">\(Rec(f) = [0, +\infty[ \quad=\quad \mathbb{R_0}^+\)</span></p>
+</div></blockquote>
+<iframe height="500" style="width: 100%;" scrolling="no" title="Función Cuadrática" src="https://www.geogebra.org/material/iframe/id/pcvnmnen/width/1000/height/600/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true"></iframe>
+<blockquote>
+<div><p>Recurso: <a class="reference external" href="https://www.geogebra.org/graphing/pcvnmnen">https://www.geogebra.org/graphing/pcvnmnen</a></p>
+</div></blockquote>
+</section>
+<section id="funcion-cubica">
+<h3><span class="section-number">6.12.5. </span>Función Cúbica<a class="headerlink" href="#funcion-cubica" title="Permalink to this heading">#</a></h3>
+<p><span class="math notranslate nohighlight">\(\large \boxed{f(x) = x^3}\)</span></p>
+<blockquote>
+<div><p><span class="math notranslate nohighlight">\(Dom(f) = \mathbb{R}\)</span></p>
+</div></blockquote>
+<blockquote>
+<div><p><span class="math notranslate nohighlight">\(Rec(f) = \mathbb{R}\)</span></p>
+</div></blockquote>
+<iframe height="500" style="width: 100%;" scrolling="no" title="Función Cúbica" src="https://www.geogebra.org/material/iframe/id/r93mgzmp/width/1000/height/600/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true"></iframe>
+<blockquote>
+<div><p>Recurso: <a class="reference external" href="https://www.geogebra.org/graphing/r93mgzmp">https://www.geogebra.org/graphing/r93mgzmp</a></p>
+</div></blockquote>
+</section>
+<section id="funcion-radical">
+<h3><span class="section-number">6.12.6. </span>Función Radical<a class="headerlink" href="#funcion-radical" title="Permalink to this heading">#</a></h3>
+<p><span class="math notranslate nohighlight">\(\large \boxed{f(x) = \sqrt{x}}\)</span></p>
+<blockquote>
+<div><p><span class="math notranslate nohighlight">\(Dom(f) = [0, +\infty[ \quad=\quad \mathbb{R_0}^+\)</span></p>
+</div></blockquote>
+<blockquote>
+<div><p><span class="math notranslate nohighlight">\(Rec(f) = [0, +\infty[ \quad=\quad \mathbb{R_0}^+\)</span></p>
+</div></blockquote>
+<iframe height="500" style="width: 100%;" scrolling="no" title="Función Radical" src="https://www.geogebra.org/material/iframe/id/za28whut/width/1000/height/600/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true"></iframe>
+<blockquote>
+<div><p>Recurso: <a class="reference external" href="https://www.geogebra.org/graphing/za28whut">https://www.geogebra.org/graphing/za28whut</a></p>
+</div></blockquote>
+</section>
+<section id="funcion-racional">
+<h3><span class="section-number">6.12.7. </span>Función Racional<a class="headerlink" href="#funcion-racional" title="Permalink to this heading">#</a></h3>
+<p><span class="math notranslate nohighlight">\(\large \boxed{f(x) = \frac{1}{x}}\)</span></p>
+<blockquote>
+<div><p><span class="math notranslate nohighlight">\(Dom(f) = \mathbb{R} - \{0\}\)</span></p>
+</div></blockquote>
+<blockquote>
+<div><p><span class="math notranslate nohighlight">\(Rec(f) = \mathbb{R} - \{0\}\)</span></p>
+</div></blockquote>
+<iframe height="500" style="width: 100%;" scrolling="no" title="Función Racional" src="https://www.geogebra.org/material/iframe/id/khtauugy/width/1000/height/600/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true"></iframe>
+<blockquote>
+<div><p>Recurso: <a class="reference external" href="https://www.geogebra.org/graphing/khtauugy">https://www.geogebra.org/graphing/khtauugy</a></p>
+</div></blockquote>
+</section>
+<section id="funcion-seno">
+<h3><span class="section-number">6.12.8. </span>Función Seno<a class="headerlink" href="#funcion-seno" title="Permalink to this heading">#</a></h3>
+<p><span class="math notranslate nohighlight">\(\large \boxed{f(x) = \sin{(x)}}\)</span></p>
+<blockquote>
+<div><p><span class="math notranslate nohighlight">\(Dom(f) = \mathbb{R}\)</span></p>
+</div></blockquote>
+<blockquote>
+<div><p><span class="math notranslate nohighlight">\(Rec(f) = [-1, 1]\)</span></p>
+</div></blockquote>
+<iframe height="500" style="width: 100%;" scrolling="no" title="Función Seno" src="https://www.geogebra.org/material/iframe/id/jfsjehxt/width/1000/height/600/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true"></iframe>
+<blockquote>
+<div><p>Recurso: <a class="reference external" href="https://www.geogebra.org/graphing/jfsjehxt">https://www.geogebra.org/graphing/jfsjehxt</a></p>
+</div></blockquote>
+</section>
+<section id="funcion-exponencial">
+<h3><span class="section-number">6.12.9. </span>Función Exponencial<a class="headerlink" href="#funcion-exponencial" title="Permalink to this heading">#</a></h3>
+<p><span class="math notranslate nohighlight">\(\large \boxed{f(x) = a^x} \small\quad\quad (a \in \mathbb{R}^+ - \{1\})\)</span></p>
+<blockquote>
+<div><p><span class="math notranslate nohighlight">\(Dom(f) = \mathbb{R}\)</span></p>
+</div></blockquote>
+<blockquote>
+<div><p><span class="math notranslate nohighlight">\(Rec(f) = ]0, +\infty[ \quad=\quad \mathbb{R}^+\)</span></p>
+</div></blockquote>
+<iframe height="500" style="width: 100%;" scrolling="no" title="Función Exponencial" src="https://www.geogebra.org/material/iframe/id/w4gk8u3k/width/1000/height/600/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true"></iframe>
+<blockquote>
+<div><p>Recurso: <a class="reference external" href="https://www.geogebra.org/graphing/w4gk8u3k">https://www.geogebra.org/graphing/w4gk8u3k</a></p>
+</div></blockquote>
+</section>
+<section id="funcion-logaritmica">
+<h3><span class="section-number">6.12.10. </span>Función Logarítmica<a class="headerlink" href="#funcion-logaritmica" title="Permalink to this heading">#</a></h3>
+<p><span class="math notranslate nohighlight">\(\large \boxed{f(x) = \log{(x)}}\)</span></p>
+<iframe height="500" style="width: 100%;" scrolling="no" title="Función Logarítmica" src="https://www.geogebra.org/material/iframe/id/dzxzsu9k/width/1000/height/600/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true"></iframe>
+<blockquote>
+<div><p>Recurso: <a class="reference external" href="https://www.geogebra.org/graphing/dzxzsu9k">https://www.geogebra.org/graphing/dzxzsu9k</a></p>
+</div></blockquote>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./books/BAIN065-24"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="5-BAIN065-24.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">5. </span>Orden en los Números Reales</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../BAIN067-24/1-BAIN067-24.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">7. </span>Geometría Plana</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definicion-de-funcion">6.1. Definición de Función</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#diagrama-sagital">6.1.1. Diagrama Sagital</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#elementos-de-una-funcion">6.2. Elementos de una Función</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dominio-de-una-funcion">6.3. Dominio de una Función</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#recorrido-de-una-funcion">6.4. Recorrido de una Función</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#algebra-de-funciones">6.5. Álgebra de Funciones</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#composicion-de-funciones">6.6. Composición de Funciones</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tipos-de-funciones">6.7. Tipos de Funciones</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#inyectividad">6.8. Inyectividad</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sobreyectividad">6.9. Sobreyectividad</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#funcion-inversa">6.10. Función Inversa</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#geogebra">6.11. GeoGebra</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#grafico-de-funciones-conocidas">6.12. Gráfico de Funciones Conocidas</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#funcion-constante">6.12.1. Función Constante</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#funcion-identidad">6.12.2. Función Identidad</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#funcion-valor-absoluto">6.12.3. Función Valor Absoluto</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#funcion-cuadratica">6.12.4. Función Cuadrática</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#funcion-cubica">6.12.5. Función Cúbica</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#funcion-radical">6.12.6. Función Radical</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#funcion-racional">6.12.7. Función Racional</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#funcion-seno">6.12.8. Función Seno</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#funcion-exponencial">6.12.9. Función Exponencial</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#funcion-logaritmica">6.12.10. Función Logarítmica</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Areté Poffart
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
